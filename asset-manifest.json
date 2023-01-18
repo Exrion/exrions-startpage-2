@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/exrions-startpage-2/static/css/main.06de11de.css",
-    "main.js": "/exrions-startpage-2/static/js/main.cf396c46.js",
+    "main.js": "/exrions-startpage-2/static/js/main.0e51a83f.js",
     "static/js/787.678a7e41.chunk.js": "/exrions-startpage-2/static/js/787.678a7e41.chunk.js",
     "static/media/roboto-all-500-normal.woff": "/exrions-startpage-2/static/media/roboto-all-500-normal.0ab669b7a0d19b178f57.woff",
     "static/media/roboto-all-700-normal.woff": "/exrions-startpage-2/static/media/roboto-all-700-normal.a457fde362a540fcadff.woff",
@@ -38,11 +38,11 @@
     "static/media/roboto-greek-ext-700-normal.woff2": "/exrions-startpage-2/static/media/roboto-greek-ext-700-normal.bd9854c751441ccc1a70.woff2",
     "index.html": "/exrions-startpage-2/index.html",
     "main.06de11de.css.map": "/exrions-startpage-2/static/css/main.06de11de.css.map",
-    "main.cf396c46.js.map": "/exrions-startpage-2/static/js/main.cf396c46.js.map",
+    "main.0e51a83f.js.map": "/exrions-startpage-2/static/js/main.0e51a83f.js.map",
     "787.678a7e41.chunk.js.map": "/exrions-startpage-2/static/js/787.678a7e41.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.06de11de.css",
-    "static/js/main.cf396c46.js"
+    "static/js/main.0e51a83f.js"
   ]
 }
