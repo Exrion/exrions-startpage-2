@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/exrions-startpage-2/static/css/main.31d6cfe0.css",
+    "main.js": "/exrions-startpage-2/static/js/main.673bc35e.js",
+    "static/js/787.678a7e41.chunk.js": "/exrions-startpage-2/static/js/787.678a7e41.chunk.js",
+    "index.html": "/exrions-startpage-2/index.html",
+    "main.673bc35e.js.map": "/exrions-startpage-2/static/js/main.673bc35e.js.map",
+    "787.678a7e41.chunk.js.map": "/exrions-startpage-2/static/js/787.678a7e41.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.673bc35e.js"
+  ]
+}
