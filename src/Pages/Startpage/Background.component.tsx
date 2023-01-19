@@ -52,6 +52,7 @@ export default function BackgroundComponent({ children }: { children: React.Reac
 
     return (
         <>
+            {/* Return skeleton before image loads */}
             {children}
         </>
     );
