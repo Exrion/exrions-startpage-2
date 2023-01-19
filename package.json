@@ -1,6 +1,6 @@
 {
   "name": "exrions-startpage-2",
-  "homepage": "https://exrion.github.io/exrions-startpage-2/",
+  "homepage": "https://exrions-startpage-2.vercel.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
