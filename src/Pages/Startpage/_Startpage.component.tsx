@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
-import { portfolioRoute } from "../../Data/Constants/Routes";
+import BackgroundComponent from "./Background.component";
 
 export default function StartpageLayout() {
     return (
         <>
-        startpage
-        <Link to={portfolioRoute}>portfolio</Link>
+            <BackgroundComponent>
+                
+            </BackgroundComponent>
         </>
     );
 }
