@@ -1,7 +1,11 @@
-import axios, { RawAxiosRequestConfig } from "axios";
-import { useMemo } from "react";
+import axios from "axios";
+import { useMemo, useState } from "react";
+import BackgroundImageSkeleton from "../../Components/Skeletons/BackgroundImageSkeleton.component";
 
 export default function BackgroundComponent({ children }: { children: React.ReactNode | React.ReactNode[]; }) {
+    const [bgLoad, setBgLoad] = useState(false);
+    let returnElement = <BackgroundImageSkeleton />;
+
     const getBgImg = () => {
         const unsplashURL = 'https://api.unsplash.com';
         const orientation = 'landscape';
@@ -34,26 +38,29 @@ export default function BackgroundComponent({ children }: { children: React.Reac
         })
             .catch(e => {
                 console.log(e);
+                setBgLoad(false);
             })
             .finally(() => {
                 document.body.style.background = `url(${imgUrl}) no-repeat center center fixed`;
+                document.body.style.backgroundColor = '#161616';
                 document.body.style.position = 'absolute';
                 document.body.style.backgroundSize = 'cover';
                 document.body.style.top = '0';
                 document.body.style.left = '0';
                 document.body.style.width = '100';
                 document.body.style.height = '100';
+                setBgLoad(true);
             });
     };
 
     useMemo(() => {
+        // Load Background Image
         getBgImg();
     }, [])
 
     return (
         <>
-            {/* Return skeleton before image loads */}
-            {children}
+            {returnElement}
         </>
     );
 
