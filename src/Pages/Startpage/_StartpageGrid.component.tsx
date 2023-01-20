@@ -1,63 +1,64 @@
 import { Box, Paper, Grid } from "@mui/material";
 import { Stack } from "@mui/system";
+import { useEffect, useState } from "react";
+import LoadingBox from "../../Components/Elements/LoadingBox.component";
 import { RegionPaperSx } from "../../Styles/Elements/Startpage/StartpageRootStyles";
+import CenterElement from "../Layouts/CenterElementLayout.component";
 
 export default function StartpageGrid() {
     const PAPER_BASE_ELEVATION = 1;
+    const [loaded, setLoaded] = useState(false);
 
-    return (
-        <>
-            <Box
-                display='flex'
-                flexDirection='column'
-                height={1}
-                width={1}
-            >
-                <Box
-                    display='flex'
-                    justifyContent='center'
-                    alignItems='center'
-                    height='inherit'
-                    width='inherit'
+    useEffect(() => {
+        setLoaded(true);
+    }, [])
+
+    if (loaded) {
+        return (
+            <CenterElement>
+                <Stack
+                    spacing={1}
+                    width='75%'
                 >
-                    {/* Main Content */}
+                    {/* Top Row */}
+                    <Box width={1}>
+                        <Paper elevation={PAPER_BASE_ELEVATION} sx={RegionPaperSx}>
+                            test
+                        </Paper>
+                    </Box>
+
+                    {/* Bottom Row */}
                     <Stack
+                        direction={{ md: 'row', sm: 'row', xs: 'column' }}
                         spacing={1}
-                        width='75%'
                     >
-                        {/* Top Row */}
-                        <Box width={1}>
-                            <Paper elevation={PAPER_BASE_ELEVATION} sx={RegionPaperSx}>
+                        <Box width={{ md: '25%', sm: '25%', xs: '1' }}>
+                            <Paper
+                                elevation={PAPER_BASE_ELEVATION}
+                                sx={RegionPaperSx}
+                            >
                                 test
                             </Paper>
                         </Box>
-
-                        {/* Bottom Row */}
-                        <Stack
-                            direction={{md: 'row', sm: 'row', xs: 'column'}}
-                            spacing={1}
-                        >
-                            <Box width={{md: '25%', sm: '25%', xs: '1'}}>
-                                <Paper
-                                    elevation={PAPER_BASE_ELEVATION}
-                                    sx={RegionPaperSx}
-                                >
-                                    test
-                                </Paper>
-                            </Box>
-                            <Box width={{md: '75%', sm: '75%', xs: '1'}}>
-                                <Paper
-                                    elevation={PAPER_BASE_ELEVATION}
-                                    sx={RegionPaperSx}
-                                >
-                                    test
-                                </Paper>
-                            </Box>
-                        </Stack>
+                        <Box width={{ md: '75%', sm: '75%', xs: '1' }}>
+                            <Paper
+                                elevation={PAPER_BASE_ELEVATION}
+                                sx={RegionPaperSx}
+                            >
+                                test
+                            </Paper>
+                        </Box>
                     </Stack>
-                </Box>
-            </Box>
-        </>
-    );
+                </Stack>
+            </CenterElement>
+        );
+    }
+    else {
+        return (
+            <CenterElement>
+                <LoadingBox />
+            </CenterElement>
+        );
+    }
 }
 
