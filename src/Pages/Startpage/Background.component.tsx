@@ -40,14 +40,17 @@ export default function BackgroundComponent({ children }: { children: React.Reac
                 setBgLoad(false);
             })
             .finally(() => {
-                document.body.style.background = `url(${imgUrl}) no-repeat center center fixed`;
-                document.body.style.backgroundColor = '#161616';
-                document.body.style.position = 'absolute';
-                document.body.style.backgroundSize = 'cover';
-                document.body.style.top = '0';
-                document.body.style.left = '0';
-                document.body.style.width = '100';
-                document.body.style.height = '100';
+                const bgDiv = document.getElementById('bgDiv')!;
+                bgDiv.style.background = `url(${imgUrl}) no-repeat center center fixed`;
+                bgDiv.style.backgroundColor = '#161616';
+                bgDiv.style.position = 'absolute';
+                bgDiv.style.backgroundSize = 'cover';
+                bgDiv.style.top = '0';
+                bgDiv.style.left = '0';
+                bgDiv.style.width = '100';
+                bgDiv.style.height = '100';
+                bgDiv.style.boxSizing = 'inherit';
+                
                 setBgLoad(true);
             });
     };
