@@ -4,7 +4,6 @@ import BackgroundImageSkeleton from "../../Components/Skeletons/BackgroundImageS
 
 export default function BackgroundComponent({ children }: { children: React.ReactNode | React.ReactNode[]; }) {
     const [bgLoad, setBgLoad] = useState(false);
-    let returnElement = <BackgroundImageSkeleton />;
 
     const getBgImg = () => {
         const unsplashURL = 'https://api.unsplash.com';
@@ -60,7 +59,9 @@ export default function BackgroundComponent({ children }: { children: React.Reac
 
     return (
         <>
-            {returnElement}
+            {
+                bgLoad ? children : <BackgroundImageSkeleton />
+            }
         </>
     );
 
