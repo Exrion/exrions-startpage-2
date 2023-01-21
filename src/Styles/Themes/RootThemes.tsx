@@ -16,6 +16,18 @@ export const startpageTheme = createTheme({
       main: '#2196f3',
     },
   },
+  typography: {
+    h1: { fontSize: '5rem' },
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 425,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+    },
+  },
 });
 
 export const portfolioTheme = createTheme({
