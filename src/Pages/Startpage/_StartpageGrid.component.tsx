@@ -2,7 +2,7 @@ import { Box, Paper, Grid } from "@mui/material";
 import { Stack } from "@mui/system";
 import { useEffect, useState } from "react";
 import LoadingBox from "../../Components/Elements/LoadingBox.component";
-import { RegionPaperSx } from "../../Styles/Elements/Startpage/StartpageRootStyles";
+import { RegionPaperSx, RegionTimePaperSx } from "../../Styles/Elements/Startpage/StartpageRootStyles";
 import CenterElement from "../Layouts/CenterElementLayout.component";
 import TimeDisplay from "./TimeDisplay.component";
 
@@ -23,7 +23,7 @@ export default function StartpageGrid() {
                 >
                     {/* Top Row */}
                     <Box width={1}>
-                        <Paper elevation={PAPER_BASE_ELEVATION} sx={RegionPaperSx}>
+                        <Paper elevation={PAPER_BASE_ELEVATION} sx={RegionTimePaperSx}>
                             <TimeDisplay />
                         </Paper>
                     </Box>
