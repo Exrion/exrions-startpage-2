@@ -22,7 +22,7 @@ function TabPanel(props: TabPanelProps) {
 }
 
 export default function TabsPanel(props: TabSelectorProps) {
-    const { active, setActive } = props;
+    const { active } = props;
 
     return (
         <>
