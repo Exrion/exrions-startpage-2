@@ -5,12 +5,11 @@ import { useEffect, useState } from "react";
 import { developerName } from '../../Data/Constants/MainConstants'
 
 export default function TimeDisplay() {
-    const [greetingText, setGreetingText] = useState('Updating...');
+    const [greetingText, setGreetingText] = useState('');
     const [dateText, setDateText] = useState('');
     const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
-        setLoaded(true);
     }, [])
 
     useEffect(() => {
@@ -30,6 +29,7 @@ export default function TimeDisplay() {
 
             setDateText(moment().format(`dddd, Do MMMM[ — ]hh[:]mmA`))
             setGreetingText(`Good ${timeOfDay()}, ${developerName}`);
+            setLoaded(true);
         }, 1000);
         return () => clearInterval(interval);
     }, []);
@@ -43,12 +43,12 @@ export default function TimeDisplay() {
             >
                 {/* Date */}
                 <Typography variant='h4' textAlign='left'>
-                    {greetingText}
+                    {loaded ? greetingText : <Skeleton variant="rounded" width='18vw' />}
                 </Typography>
 
                 {/* Time */}
                 <Typography variant='h4' textAlign='right'>
-                    {dateText}
+                    {loaded ? dateText : <Skeleton variant="rounded" width='24vw' />}
                 </Typography>
             </Stack>
         </>
