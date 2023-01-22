@@ -50,7 +50,7 @@ export default function BackgroundComponent({ children }: { children: React.Reac
                 bgDiv.style.width = '100';
                 bgDiv.style.height = '100';
                 bgDiv.style.boxSizing = 'inherit';
-
+                console.log('bg responded')
                 setBgLoad(true);
             });
     };
