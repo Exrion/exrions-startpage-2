@@ -4,11 +4,14 @@ import { useEffect, useState } from "react";
 import LoadingBox from "../../Components/Elements/LoadingBox.component";
 import { RegionPaperSx, RegionTimePaperSx } from "../../Styles/Elements/Startpage/StartpageRootStyles";
 import CenterElement from "../Layouts/CenterElementLayout.component";
+import TabsPanel from "./TabsPanel.component";
+import TabsSelector from "./TabsSelector.component";
 import TimeDisplay from "./TimeDisplay.component";
 
 export default function StartpageGrid() {
     const PAPER_BASE_ELEVATION = 1;
     const [loaded, setLoaded] = useState(false);
+    const [active, setActive] = useState(0); // Tabs State Provider
 
     useEffect(() => {
         setLoaded(true);
@@ -38,7 +41,7 @@ export default function StartpageGrid() {
                                 elevation={PAPER_BASE_ELEVATION}
                                 sx={RegionPaperSx}
                             >
-                                test
+                                <TabsSelector active={active} setActive={setActive} />
                             </Paper>
                         </Box>
                         <Box width={{ md: '75%', sm: '75%', xs: '1' }}>
@@ -46,7 +49,7 @@ export default function StartpageGrid() {
                                 elevation={PAPER_BASE_ELEVATION}
                                 sx={RegionPaperSx}
                             >
-                                test
+                                <TabsPanel active={active} setActive={setActive} />
                             </Paper>
                         </Box>
                     </Stack>
