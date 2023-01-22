@@ -1,12 +1,17 @@
-import { Typography } from "@mui/material";
+import { Skeleton, Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 import moment from "moment";
 import { useEffect, useState } from "react";
 import { developerName } from '../../Data/Constants/MainConstants'
 
 export default function TimeDisplay() {
-    const [greetingText, setGreetingText] = useState('Upadting...');
+    const [greetingText, setGreetingText] = useState('Updating...');
     const [dateText, setDateText] = useState('');
+    const [loaded, setLoaded] = useState(false);
+
+    useEffect(() => {
+        setLoaded(true);
+    }, [])
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -23,7 +28,7 @@ export default function TimeDisplay() {
                 }
             }
 
-            setDateText(moment().format(`dddd, Do MMMM YYYY[ — ]hh[:]mm[:]ssA`))
+            setDateText(moment().format(`dddd, Do MMMM[ — ]hh[:]mmA`))
             setGreetingText(`Good ${timeOfDay()}, ${developerName}`);
         }, 1000);
         return () => clearInterval(interval);
