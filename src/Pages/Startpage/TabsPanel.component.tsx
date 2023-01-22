@@ -27,19 +27,19 @@ export default function TabsPanel(props: TabSelectorProps) {
     return (
         <>
             <TabPanel value={active} index={0}>
-                Item One
+                Favourites
             </TabPanel>
             <TabPanel value={active} index={1}>
-                Item Two
+                Entertainment
             </TabPanel>
             <TabPanel value={active} index={2}>
-                Item Three
+                Social
             </TabPanel>
             <TabPanel value={active} index={3}>
-                Item Four
+                School
             </TabPanel>
             <TabPanel value={active} index={4}>
-                Item Five
+                Development
             </TabPanel>
         </>
     );
