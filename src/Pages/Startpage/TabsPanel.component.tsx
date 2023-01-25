@@ -1,6 +1,11 @@
 import { Box, Typography } from "@mui/material";
 import TabPanelProps from '../../Interfaces/TabPanelProps';
 import TabSelectorProps from '../../Interfaces/TabSelectorProps';
+import DevelopmentPanel from "./TabPanels/DevelopmentPanel";
+import EntertainmentPanel from "./TabPanels/EntertainmentPanel";
+import FavouritesPanel from "./TabPanels/FavouritesPanel";
+import SchoolPanel from "./TabPanels/SchoolPanel";
+import SocialPanel from "./TabPanels/SocialPanel";
 
 function TabPanel(props: TabPanelProps) {
     const { children, value, index, ...other } = props;
@@ -27,19 +32,19 @@ export default function TabsPanel(props: TabSelectorProps) {
     return (
         <>
             <TabPanel value={active} index={0}>
-                Favourites
+                <FavouritesPanel />
             </TabPanel>
             <TabPanel value={active} index={1}>
-                Entertainment
+                <EntertainmentPanel />
             </TabPanel>
             <TabPanel value={active} index={2}>
-                Social
+                <SocialPanel />
             </TabPanel>
             <TabPanel value={active} index={3}>
-                School
+                <SchoolPanel />
             </TabPanel>
             <TabPanel value={active} index={4}>
-                Development
+                <DevelopmentPanel />
             </TabPanel>
         </>
     );

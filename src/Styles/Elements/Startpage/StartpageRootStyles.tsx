@@ -8,3 +8,7 @@ export const RegionPaperSx = {
     p: 3,
     opacity: 0.9,
 };
+
+export const QuotePaperSx = {
+    
+}

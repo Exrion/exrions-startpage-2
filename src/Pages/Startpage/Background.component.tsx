@@ -6,12 +6,12 @@ export default function BackgroundComponent({ children }: { children: React.Reac
     const [bgLoad, setBgLoad] = useState(false);
 
     const getBgImg = () => {
-        const unsplashURL = 'https://api.unsplash.com';
+        const baseURL = 'https://api.unsplash.com';
         const orientation = 'landscape';
         const collectionId = '11649432';
         let imgUrl: string = 'https://images.unsplash.com/photo-1545350089-47b3d117a92c?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjI1MTR8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzQxMjI2MDI&ixlib=rb-4.0.3&q=80';
 
-        const apiUrl = `${unsplashURL}/photos/random`;
+        const apiUrl = `${baseURL}/photos/random`;
         let apiConfig = {};
 
         // ENV
