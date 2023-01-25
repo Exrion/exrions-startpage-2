@@ -24,7 +24,6 @@ export default function QuotesDisplay() {
     useMemo(() => {
         getQuote().then((res: Quotable) => {
             setQuoteData(res);
-            console.log(quoteData)
         }).catch(e => {
             console.log(e);
         })
