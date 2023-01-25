@@ -2,6 +2,7 @@ import { Quotable } from "../../Interfaces/QuotableType";
 import { useEffect, useMemo, useState } from "react";
 import { HttpGet } from "../../Utilities/HttpHelper";
 import Typography from "@mui/material/Typography";
+import Skeleton from "@mui/material/Skeleton/Skeleton";
 
 async function getQuote() {
     const baseURL = 'https://api.quotable.io';
@@ -45,7 +46,10 @@ export default function QuotesDisplay() {
     else {
         return (
             <>
-                Loading
+                <Skeleton variant='text' width='100%' />
+                <Skeleton variant='text' width='100%' />
+                <Skeleton variant='text' width='100%' />
+                <Skeleton variant='text' width='20%' />
             </>
         );
     }
