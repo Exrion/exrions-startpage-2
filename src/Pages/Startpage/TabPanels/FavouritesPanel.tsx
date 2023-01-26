@@ -9,7 +9,7 @@ export default function FavouritesPanel() {
             >
                 {/* Left Column */}
                 <Box>
-
+                    
                 </Box>
 
                 {/* Right Column */}
