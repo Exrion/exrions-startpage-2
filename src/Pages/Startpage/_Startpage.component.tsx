@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import FabSwitcher from "../FabSwitcher.component";
 import BackgroundComponent from "./Background.component";
 import StartpageGrid from "./_StartpageGrid.component";
 
@@ -11,6 +12,7 @@ export default function StartpageLayout() {
 
     return (
         <>
+            <FabSwitcher location='startpage' />
             <div id="bgDiv" style={{
                 width: '100%',
                 height: '100%'
