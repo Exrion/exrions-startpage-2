@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Fade, Typography } from "@mui/material";
 import TabPanelProps from '../../Interfaces/TabPanelProps';
 import TabSelectorProps from '../../Interfaces/TabSelectorProps';
 import DevelopmentPanel from "./TabPanels/DevelopmentPanel";
@@ -11,18 +11,23 @@ function TabPanel(props: TabPanelProps) {
     const { children, value, index, ...other } = props;
 
     return (
-        <div
-            role="tabpanel"
-            hidden={value !== index}
-            id={`vertical-tabpanel-${index}`}
-            {...other}
+        <Fade
+            in={value === index}
+            timeout={300}
         >
-            {value === index && (
-                <Box>
-                    <Typography>{children}</Typography>
-                </Box>
-            )}
-        </div>
+            <div
+                role="tabpanel"
+                hidden={value !== index}
+                id={`vertical-tabpanel-${index}`}
+                {...other}
+            >
+                {value === index && (
+                    <Box>
+                        <Typography>{children}</Typography>
+                    </Box>
+                )}
+            </div>
+        </Fade>
     );
 }
 
