@@ -9,7 +9,7 @@ export default function EntertainmentPanel() {
     return (
         <>
             <Stack spacing={1}>
-                <Typography variant='h4' color='primary'>Development</Typography>
+                <Typography variant='h4' color='primary'>Entertainment</Typography>
                 <Stack
                     direction={{ md: 'row', sm: 'row', xs: 'column' }}
                     spacing={1}
