@@ -2,7 +2,7 @@ import { Box, Paper } from "@mui/material";
 import { Stack } from "@mui/system";
 import { useEffect, useState } from "react";
 import LoadingBox from "../../Components/Elements/LoadingBox.component";
-import { RegionPaperSx, RegionTimePaperSx, QuotePaperSx } from "../../Styles/Elements/Startpage/StartpageRootStyles";
+import { RegionPaperSx, RegionTimePaperSx } from "../../Styles/Elements/Startpage/StartpageRootStyles";
 import CenterElement from "../Layouts/CenterElementLayout.component";
 import TabsPanel from "./TabsPanel.component";
 import TabsSelector from "./TabsSelector.component";
