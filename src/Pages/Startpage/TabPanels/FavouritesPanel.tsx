@@ -1,7 +1,8 @@
 import { Box, Divider, Paper, Stack, Typography } from "@mui/material";
-import { LinkDefault, LinkFavourites_LEO2External, LinkFavourites_LEO2Internal } from "../../../Data/Constants/Portfolio/TabPanelLinks";
+import { LinkDevelopment_GitHub, LinkSchool_LEO2External, LinkSchool_LEO2Internal, LinkEntertainment_Youtube, LinkSchool_StudentPortal } from "../../../Data/Constants/Portfolio/TabPanelLinks";
 import { LinkPaperSx, LinkStyle } from "../../../Styles/Elements/Startpage/StartpageRootStyles";
-import LanguageIcon from '@mui/icons-material/Language';
+import SchoolIcon from '@mui/icons-material/School';
+import { GitHub, YouTube } from "@mui/icons-material";
 
 export default function FavouritesPanel() {
     const PAPER_BASE_ELEVATION = 2;
@@ -17,7 +18,7 @@ export default function FavouritesPanel() {
                     {/* Left Column */}
                     <Box width={{ md: 0.5, sm: 0.5, xs: 1 }}>
                         <Stack spacing={1}>
-                            <a style={LinkStyle} href={LinkFavourites_LEO2External}>
+                            <a style={LinkStyle} href={LinkSchool_LEO2External}>
                                 <Paper
                                     elevation={PAPER_BASE_ELEVATION}
                                     sx={LinkPaperSx}
@@ -26,13 +27,13 @@ export default function FavouritesPanel() {
                                         direction='row'
                                         spacing={1}
                                     >
-                                        <LanguageIcon />
+                                        <SchoolIcon />
                                         <Divider orientation="vertical" flexItem />
                                         <Typography variant="body1">LEO 2.0 (External)</Typography>
                                     </Stack>
                                 </Paper>
                             </a>
-                            <a style={LinkStyle} href={LinkDefault}>
+                            <a style={LinkStyle} href={LinkDevelopment_GitHub}>
                                 <Paper
                                     elevation={PAPER_BASE_ELEVATION}
                                     sx={LinkPaperSx}
@@ -41,13 +42,13 @@ export default function FavouritesPanel() {
                                         direction='row'
                                         spacing={1}
                                     >
-                                        <LanguageIcon />
+                                        <GitHub />
                                         <Divider orientation="vertical" flexItem />
-                                        <Typography variant="body1">PLACEHOLDER</Typography>
+                                        <Typography variant="body1">GitHub</Typography>
                                     </Stack>
                                 </Paper>
                             </a>
-                            <a style={LinkStyle} href={LinkDefault}>
+                            <a style={LinkStyle} href={LinkSchool_StudentPortal}>
                                 <Paper
                                     elevation={PAPER_BASE_ELEVATION}
                                     sx={LinkPaperSx}
@@ -56,9 +57,9 @@ export default function FavouritesPanel() {
                                         direction='row'
                                         spacing={1}
                                     >
-                                        <LanguageIcon />
+                                        <SchoolIcon />
                                         <Divider orientation="vertical" flexItem />
-                                        <Typography variant="body1">PLACEHOLDER</Typography>
+                                        <Typography variant="body1">RP Student Portal</Typography>
                                     </Stack>
                                 </Paper>
                             </a>
@@ -68,7 +69,7 @@ export default function FavouritesPanel() {
                     {/* Right Column */}
                     <Box width={{ md: 0.5, sm: 0.5, xs: 1 }}>
                         <Stack spacing={1}>
-                            <a style={LinkStyle} href={LinkDefault}>
+                            <a style={LinkStyle} href={LinkSchool_LEO2Internal}>
                                 <Paper
                                     elevation={PAPER_BASE_ELEVATION}
                                     sx={LinkPaperSx}
@@ -77,13 +78,13 @@ export default function FavouritesPanel() {
                                         direction='row'
                                         spacing={1}
                                     >
-                                        <LanguageIcon />
+                                        <SchoolIcon />
                                         <Divider orientation="vertical" flexItem />
-                                        <Typography variant="body1">PLACEHOLDER</Typography>
+                                        <Typography variant="body1">LEO 2.0 (Internal)</Typography>
                                     </Stack>
                                 </Paper>
                             </a>
-                            <a style={LinkStyle} href={LinkDefault}>
+                            <a style={LinkStyle} href={LinkEntertainment_Youtube}>
                                 <Paper
                                     elevation={PAPER_BASE_ELEVATION}
                                     sx={LinkPaperSx}
@@ -92,9 +93,9 @@ export default function FavouritesPanel() {
                                         direction='row'
                                         spacing={1}
                                     >
-                                        <LanguageIcon />
+                                        <YouTube />
                                         <Divider orientation="vertical" flexItem />
-                                        <Typography variant="body1">PLACEHOLDER</Typography>
+                                        <Typography variant="body1">YouTube</Typography>
                                     </Stack>
                                 </Paper>
                             </a>
