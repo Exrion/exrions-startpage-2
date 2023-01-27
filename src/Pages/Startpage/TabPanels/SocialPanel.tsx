@@ -1,6 +1,7 @@
-import { Box, Paper, Stack, Typography } from "@mui/material";
+import { Box, Divider, Paper, Stack, Typography } from "@mui/material";
 import { LinkDefault } from "../../../Data/Constants/Portfolio/TabPanelLinks";
 import { LinkPaperSx, LinkStyle } from "../../../Styles/Elements/Startpage/StartpageRootStyles";
+import LanguageIcon from '@mui/icons-material/Language';
 
 export default function SocialPanel() {
     const PAPER_BASE_ELEVATION = 2;
@@ -8,7 +9,7 @@ export default function SocialPanel() {
     return (
         <>
             <Stack spacing={1}>
-                <Typography variant='h4' color='primary'>Social</Typography>
+                <Typography variant='h4' color='primary'>Development</Typography>
                 <Stack
                     direction={{ md: 'row', sm: 'row', xs: 'column' }}
                     spacing={1}
@@ -21,7 +22,14 @@ export default function SocialPanel() {
                                     elevation={PAPER_BASE_ELEVATION}
                                     sx={LinkPaperSx}
                                 >
-                                    <Typography variant="body1">PLACEHOLDER</Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
+                                        <LanguageIcon />
+                                        <Divider orientation="vertical" flexItem />
+                                        <Typography variant="body1">PLACEHOLDER</Typography>
+                                    </Stack>
                                 </Paper>
                             </a>
                             <a style={LinkStyle} href={LinkDefault}>
@@ -29,7 +37,14 @@ export default function SocialPanel() {
                                     elevation={PAPER_BASE_ELEVATION}
                                     sx={LinkPaperSx}
                                 >
-                                    <Typography variant="body1">PLACEHOLDER</Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
+                                        <LanguageIcon />
+                                        <Divider orientation="vertical" flexItem />
+                                        <Typography variant="body1">PLACEHOLDER</Typography>
+                                    </Stack>
                                 </Paper>
                             </a>
                             <a style={LinkStyle} href={LinkDefault}>
@@ -37,7 +52,14 @@ export default function SocialPanel() {
                                     elevation={PAPER_BASE_ELEVATION}
                                     sx={LinkPaperSx}
                                 >
-                                    <Typography variant="body1">PLACEHOLDER</Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
+                                        <LanguageIcon />
+                                        <Divider orientation="vertical" flexItem />
+                                        <Typography variant="body1">PLACEHOLDER</Typography>
+                                    </Stack>
                                 </Paper>
                             </a>
                         </Stack>
@@ -51,7 +73,14 @@ export default function SocialPanel() {
                                     elevation={PAPER_BASE_ELEVATION}
                                     sx={LinkPaperSx}
                                 >
-                                    <Typography variant="body1">PLACEHOLDER</Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
+                                        <LanguageIcon />
+                                        <Divider orientation="vertical" flexItem />
+                                        <Typography variant="body1">PLACEHOLDER</Typography>
+                                    </Stack>
                                 </Paper>
                             </a>
                             <a style={LinkStyle} href={LinkDefault}>
@@ -59,7 +88,14 @@ export default function SocialPanel() {
                                     elevation={PAPER_BASE_ELEVATION}
                                     sx={LinkPaperSx}
                                 >
-                                    <Typography variant="body1">PLACEHOLDER</Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
+                                        <LanguageIcon />
+                                        <Divider orientation="vertical" flexItem />
+                                        <Typography variant="body1">PLACEHOLDER</Typography>
+                                    </Stack>
                                 </Paper>
                             </a>
                         </Stack>

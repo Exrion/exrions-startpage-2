@@ -19,7 +19,7 @@ export const LinkPaperSx = {
         bgcolor: theme.palette.background.default,
         color: theme.palette.primary.main,
         transition: '0.3s'
-    },
+    }
 }
 
 export const LinkStyle = {

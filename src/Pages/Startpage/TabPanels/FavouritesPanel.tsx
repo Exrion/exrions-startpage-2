@@ -1,6 +1,7 @@
-import { Box, Paper, Stack, Typography } from "@mui/material";
+import { Box, Divider, Paper, Stack, Typography } from "@mui/material";
 import { LinkDefault, LinkFavourites_LEO2External, LinkFavourites_LEO2Internal } from "../../../Data/Constants/Portfolio/TabPanelLinks";
 import { LinkPaperSx, LinkStyle } from "../../../Styles/Elements/Startpage/StartpageRootStyles";
+import LanguageIcon from '@mui/icons-material/Language';
 
 export default function FavouritesPanel() {
     const PAPER_BASE_ELEVATION = 2;
@@ -14,14 +15,21 @@ export default function FavouritesPanel() {
                     spacing={1}
                 >
                     {/* Left Column */}
-                    <Box width={{md: 0.5, sm: 0.5, xs: 1}}>
+                    <Box width={{ md: 0.5, sm: 0.5, xs: 1 }}>
                         <Stack spacing={1}>
                             <a style={LinkStyle} href={LinkFavourites_LEO2External}>
                                 <Paper
                                     elevation={PAPER_BASE_ELEVATION}
                                     sx={LinkPaperSx}
                                 >
-                                    <Typography variant="body1">LEO 2.0 (External)</Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
+                                        <LanguageIcon />
+                                        <Divider orientation="vertical" flexItem />
+                                        <Typography variant="body1">LEO 2.0 (External)</Typography>
+                                    </Stack>
                                 </Paper>
                             </a>
                             <a style={LinkStyle} href={LinkDefault}>
@@ -29,7 +37,14 @@ export default function FavouritesPanel() {
                                     elevation={PAPER_BASE_ELEVATION}
                                     sx={LinkPaperSx}
                                 >
-                                    <Typography variant="body1">PLACEHOLDER</Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
+                                        <LanguageIcon />
+                                        <Divider orientation="vertical" flexItem />
+                                        <Typography variant="body1">PLACEHOLDER</Typography>
+                                    </Stack>
                                 </Paper>
                             </a>
                             <a style={LinkStyle} href={LinkDefault}>
@@ -37,21 +52,35 @@ export default function FavouritesPanel() {
                                     elevation={PAPER_BASE_ELEVATION}
                                     sx={LinkPaperSx}
                                 >
-                                    <Typography variant="body1">PLACEHOLDER</Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
+                                        <LanguageIcon />
+                                        <Divider orientation="vertical" flexItem />
+                                        <Typography variant="body1">PLACEHOLDER</Typography>
+                                    </Stack>
                                 </Paper>
                             </a>
                         </Stack>
                     </Box>
 
                     {/* Right Column */}
-                    <Box width={{md: 0.5, sm: 0.5, xs: 1}}>
+                    <Box width={{ md: 0.5, sm: 0.5, xs: 1 }}>
                         <Stack spacing={1}>
-                            <a style={LinkStyle} href={LinkFavourites_LEO2Internal}>
+                            <a style={LinkStyle} href={LinkDefault}>
                                 <Paper
                                     elevation={PAPER_BASE_ELEVATION}
                                     sx={LinkPaperSx}
                                 >
-                                    <Typography variant="body1">LEO 2.0 (Internal)</Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
+                                        <LanguageIcon />
+                                        <Divider orientation="vertical" flexItem />
+                                        <Typography variant="body1">PLACEHOLDER</Typography>
+                                    </Stack>
                                 </Paper>
                             </a>
                             <a style={LinkStyle} href={LinkDefault}>
@@ -59,7 +88,14 @@ export default function FavouritesPanel() {
                                     elevation={PAPER_BASE_ELEVATION}
                                     sx={LinkPaperSx}
                                 >
-                                    <Typography variant="body1">PLACEHOLDER</Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
+                                        <LanguageIcon />
+                                        <Divider orientation="vertical" flexItem />
+                                        <Typography variant="body1">PLACEHOLDER</Typography>
+                                    </Stack>
                                 </Paper>
                             </a>
                         </Stack>
