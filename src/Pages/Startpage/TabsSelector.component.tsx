@@ -1,10 +1,18 @@
-import { Tab, Tabs } from "@mui/material";
+import { Tab, Tabs, Typography } from "@mui/material";
 import TabSelectorProps from '../../Interfaces/TabSelectorProps';
 
 function a11yProps(index: number) {
     return {
         id: `vertical-tab-${index}`
     };
+}
+
+function LabelTypography(label: string) {
+    return (
+        <>
+            <Typography fontFamily='Roboto' fontWeight={400}>{label}</Typography>
+        </>
+    );
 }
 
 export default function TabsSelector(props: TabSelectorProps) {
@@ -22,11 +30,11 @@ export default function TabsSelector(props: TabSelectorProps) {
                 value={active}
                 onChange={handleChange}
             >
-                <Tab label='Favourites' {...a11yProps(0)} />
-                <Tab label='Entertainment' {...a11yProps(1)} />
-                <Tab label='Social' {...a11yProps(2)} />
-                <Tab label='School' {...a11yProps(3)} />
-                <Tab label='Development' {...a11yProps(4)} />
+                <Tab label={LabelTypography('Favourites')} {...a11yProps(0)} />
+                <Tab label={LabelTypography('Entertainment')} {...a11yProps(1)} />
+                <Tab label={LabelTypography('Social')} {...a11yProps(2)} />
+                <Tab label={LabelTypography('School')} {...a11yProps(3)} />
+                <Tab label={LabelTypography('Development')} {...a11yProps(4)} />
             </Tabs>
         </>
     );
