@@ -3,4 +3,9 @@ export const LinkSchool_LEO2External = 'https://rpfs.rp.edu.sg/adfs/ls/?wa=wsign
 export const LinkSchool_LEO2Internal = 'https://myleo.rp.edu.sg/CoreBase/Login/Index';
 export const LinkDevelopment_GitHub = 'https://github.com/';
 export const LinkEntertainment_Youtube = 'https://www.youtube.com/?gl=SG';
+export const LinkEntertainment_Netflix = 'https://www.netflix.com/sg/browse/genre/34399';
+export const LinkEntertainment_PrimeTV = 'https://www.primevideo.com/';
+export const LinkEntertainment_Twitch = 'https://www.twitch.tv/';
+export const LinkEntertainment_DisneyPlus = 'https://www.disneyplus.com/en-gb/home';
+export const LinkEntertainment_Spotify = 'https://open.spotify.com/';
 export const LinkSchool_StudentPortal = 'https://students.rp.edu.sg/';

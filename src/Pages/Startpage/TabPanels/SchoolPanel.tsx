@@ -1,11 +1,6 @@
-import { Box, Divider, Paper, Stack, Typography } from "@mui/material";
-import { LinkDefault } from "../../../Data/Constants/Portfolio/TabPanelLinks";
-import { LinkPaperSx, LinkStyle } from "../../../Styles/Elements/Startpage/StartpageRootStyles";
-import LanguageIcon from '@mui/icons-material/Language';
+import { Box, Link, Stack, Typography } from "@mui/material";
 
 export default function SchoolPanel() {
-    const PAPER_BASE_ELEVATION = 2;
-
     return (
         <>
             <Stack spacing={1}>
@@ -17,87 +12,17 @@ export default function SchoolPanel() {
                     {/* Left Column */}
                     <Box width={{ md: 0.5, sm: 0.5, xs: 1 }}>
                         <Stack spacing={1}>
-                            <a style={LinkStyle} href={LinkDefault}>
-                                <Paper
-                                    elevation={PAPER_BASE_ELEVATION}
-                                    sx={LinkPaperSx}
-                                >
-                                    <Stack
-                                        direction='row'
-                                        spacing={1}
-                                    >
-                                        <LanguageIcon />
-                                        <Divider orientation="vertical" flexItem />
-                                        <Typography variant="body1">PLACEHOLDER</Typography>
-                                    </Stack>
-                                </Paper>
-                            </a>
-                            <a style={LinkStyle} href={LinkDefault}>
-                                <Paper
-                                    elevation={PAPER_BASE_ELEVATION}
-                                    sx={LinkPaperSx}
-                                >
-                                    <Stack
-                                        direction='row'
-                                        spacing={1}
-                                    >
-                                        <LanguageIcon />
-                                        <Divider orientation="vertical" flexItem />
-                                        <Typography variant="body1">PLACEHOLDER</Typography>
-                                    </Stack>
-                                </Paper>
-                            </a>
-                            <a style={LinkStyle} href={LinkDefault}>
-                                <Paper
-                                    elevation={PAPER_BASE_ELEVATION}
-                                    sx={LinkPaperSx}
-                                >
-                                    <Stack
-                                        direction='row'
-                                        spacing={1}
-                                    >
-                                        <LanguageIcon />
-                                        <Divider orientation="vertical" flexItem />
-                                        <Typography variant="body1">PLACEHOLDER</Typography>
-                                    </Stack>
-                                </Paper>
-                            </a>
+                            <Link />
+                            <Link />
+                            <Link />
                         </Stack>
                     </Box>
 
                     {/* Right Column */}
                     <Box width={{ md: 0.5, sm: 0.5, xs: 1 }}>
                         <Stack spacing={1}>
-                            <a style={LinkStyle} href={LinkDefault}>
-                                <Paper
-                                    elevation={PAPER_BASE_ELEVATION}
-                                    sx={LinkPaperSx}
-                                >
-                                    <Stack
-                                        direction='row'
-                                        spacing={1}
-                                    >
-                                        <LanguageIcon />
-                                        <Divider orientation="vertical" flexItem />
-                                        <Typography variant="body1">PLACEHOLDER</Typography>
-                                    </Stack>
-                                </Paper>
-                            </a>
-                            <a style={LinkStyle} href={LinkDefault}>
-                                <Paper
-                                    elevation={PAPER_BASE_ELEVATION}
-                                    sx={LinkPaperSx}
-                                >
-                                    <Stack
-                                        direction='row'
-                                        spacing={1}
-                                    >
-                                        <LanguageIcon />
-                                        <Divider orientation="vertical" flexItem />
-                                        <Typography variant="body1">PLACEHOLDER</Typography>
-                                    </Stack>
-                                </Paper>
-                            </a>
+                            <Link />
+                            <Link />
                         </Stack>
                     </Box>
                 </Stack>

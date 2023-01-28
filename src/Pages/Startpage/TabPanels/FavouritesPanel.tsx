@@ -1,12 +1,10 @@
-import { Box, Divider, Paper, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import { LinkDevelopment_GitHub, LinkSchool_LEO2External, LinkSchool_LEO2Internal, LinkEntertainment_Youtube, LinkSchool_StudentPortal } from "../../../Data/Constants/Portfolio/TabPanelLinks";
-import { LinkPaperSx, LinkStyle } from "../../../Styles/Elements/Startpage/StartpageRootStyles";
 import SchoolIcon from '@mui/icons-material/School';
 import { GitHub, YouTube } from "@mui/icons-material";
+import Link from "../Links/Link";
 
 export default function FavouritesPanel() {
-    const PAPER_BASE_ELEVATION = 2;
-
     return (
         <>
             <Stack spacing={1}>
@@ -18,87 +16,17 @@ export default function FavouritesPanel() {
                     {/* Left Column */}
                     <Box width={{ md: 0.5, sm: 0.5, xs: 1 }}>
                         <Stack spacing={1}>
-                            <a style={LinkStyle} href={LinkSchool_LEO2External}>
-                                <Paper
-                                    elevation={PAPER_BASE_ELEVATION}
-                                    sx={LinkPaperSx}
-                                >
-                                    <Stack
-                                        direction='row'
-                                        spacing={1}
-                                    >
-                                        <SchoolIcon />
-                                        <Divider orientation="vertical" flexItem />
-                                        <Typography variant="body1">LEO 2.0 (External)</Typography>
-                                    </Stack>
-                                </Paper>
-                            </a>
-                            <a style={LinkStyle} href={LinkDevelopment_GitHub}>
-                                <Paper
-                                    elevation={PAPER_BASE_ELEVATION}
-                                    sx={LinkPaperSx}
-                                >
-                                    <Stack
-                                        direction='row'
-                                        spacing={1}
-                                    >
-                                        <GitHub />
-                                        <Divider orientation="vertical" flexItem />
-                                        <Typography variant="body1">GitHub</Typography>
-                                    </Stack>
-                                </Paper>
-                            </a>
-                            <a style={LinkStyle} href={LinkSchool_StudentPortal}>
-                                <Paper
-                                    elevation={PAPER_BASE_ELEVATION}
-                                    sx={LinkPaperSx}
-                                >
-                                    <Stack
-                                        direction='row'
-                                        spacing={1}
-                                    >
-                                        <SchoolIcon />
-                                        <Divider orientation="vertical" flexItem />
-                                        <Typography variant="body1">RP Student Portal</Typography>
-                                    </Stack>
-                                </Paper>
-                            </a>
+                            <Link label='LEO 2.0 (External)' link={LinkSchool_LEO2External} icon={<SchoolIcon />} />
+                            <Link label='GitHub' link={LinkDevelopment_GitHub} icon={<GitHub />} />
+                            <Link label='RP Student Portal' link={LinkSchool_StudentPortal} icon={<SchoolIcon />} />
                         </Stack>
                     </Box>
 
                     {/* Right Column */}
                     <Box width={{ md: 0.5, sm: 0.5, xs: 1 }}>
                         <Stack spacing={1}>
-                            <a style={LinkStyle} href={LinkSchool_LEO2Internal}>
-                                <Paper
-                                    elevation={PAPER_BASE_ELEVATION}
-                                    sx={LinkPaperSx}
-                                >
-                                    <Stack
-                                        direction='row'
-                                        spacing={1}
-                                    >
-                                        <SchoolIcon />
-                                        <Divider orientation="vertical" flexItem />
-                                        <Typography variant="body1">LEO 2.0 (Internal)</Typography>
-                                    </Stack>
-                                </Paper>
-                            </a>
-                            <a style={LinkStyle} href={LinkEntertainment_Youtube}>
-                                <Paper
-                                    elevation={PAPER_BASE_ELEVATION}
-                                    sx={LinkPaperSx}
-                                >
-                                    <Stack
-                                        direction='row'
-                                        spacing={1}
-                                    >
-                                        <YouTube />
-                                        <Divider orientation="vertical" flexItem />
-                                        <Typography variant="body1">YouTube</Typography>
-                                    </Stack>
-                                </Paper>
-                            </a>
+                            <Link label='LEO 2.0 (Internal)' link={LinkSchool_LEO2Internal} icon={<SchoolIcon />} />
+                            <Link label='YouTube' link={LinkEntertainment_Youtube} icon={<YouTube />} />
                         </Stack>
                     </Box>
                 </Stack>
