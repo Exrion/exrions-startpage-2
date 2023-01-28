@@ -8,4 +8,6 @@ export const LinkEntertainment_PrimeTV = 'https://www.primevideo.com/';
 export const LinkEntertainment_Twitch = 'https://www.twitch.tv/';
 export const LinkEntertainment_DisneyPlus = 'https://www.disneyplus.com/en-gb/home';
 export const LinkEntertainment_Spotify = 'https://open.spotify.com/';
+export const LinkEntertainment_9Anime = 'https://9anime.pl';
+export const LinkEntertainment_BFlix = 'www8.bflix.to';
 export const LinkSchool_StudentPortal = 'https://students.rp.edu.sg/';
