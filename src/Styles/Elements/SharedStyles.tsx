@@ -1,4 +1,4 @@
-export const fabBoxSx = {
+export const FabBoxSx = {
     position: 'absolute',
     margin: 0,
     top: 20,

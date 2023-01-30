@@ -4,7 +4,7 @@ import { Box, Fab, Tooltip } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { defaultRoute, portfolioRoute } from '../Data/Constants/Routes';
 import FabSwitcherProps from '../Interfaces/FabSwitcherProps';
-import { fabBoxSx as FabBoxSx } from '../Styles/Elements/SharedStyles';
+import { FabBoxSx as FabBoxSx } from '../Styles/Elements/SharedStyles';
 
 export default function FabSwitcher(props: FabSwitcherProps) {
     const { location } = props;

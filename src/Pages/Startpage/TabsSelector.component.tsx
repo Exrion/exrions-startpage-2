@@ -1,5 +1,6 @@
 import { Tab, Tabs, Typography } from "@mui/material";
 import TabSelectorProps from '../../Interfaces/TabSelectorProps';
+import { TabsSelectorSx } from "../../Styles/Elements/Startpage/StartpageRootStyles";
 
 function a11yProps(index: number) {
     return {
@@ -27,6 +28,7 @@ export default function TabsSelector(props: TabSelectorProps) {
             <Tabs
                 orientation='vertical'
                 variant='standard'
+                sx={TabsSelectorSx}
                 value={active}
                 onChange={handleChange}
             >

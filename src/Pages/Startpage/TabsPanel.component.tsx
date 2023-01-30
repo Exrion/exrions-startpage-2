@@ -1,6 +1,7 @@
 import { Box, Fade, Typography } from "@mui/material";
 import TabPanelProps from '../../Interfaces/TabPanelProps';
 import TabSelectorProps from '../../Interfaces/TabSelectorProps';
+import { TabsPanelSx } from "../../Styles/Elements/Startpage/StartpageRootStyles";
 import DevelopmentPanel from "./TabPanels/DevelopmentPanel";
 import EntertainmentPanel from "./TabPanels/EntertainmentPanel";
 import FavouritesPanel from "./TabPanels/FavouritesPanel";
@@ -22,7 +23,7 @@ function TabPanel(props: TabPanelProps) {
                 {...other}
             >
                 {value === index && (
-                    <Box>
+                    <Box sx={TabsPanelSx}>
                         <Typography>{children}</Typography>
                     </Box>
                 )}
