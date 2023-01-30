@@ -1,4 +1,9 @@
-import { Box, Link, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
+import { LinkSocial_Instagram, LinkSocial_LinkedIn, LinkSocial_Reddit, LinkSocial_Telegram, LinkSocial_Twitter, LinkSocial_WhatsApp } from "../../../Data/Constants/Portfolio/TabPanelLinks";
+import Link from "../Links/Link";
+import Icon from '@mdi/react';
+import { mdiWhatsapp, mdiInstagram, mdiLinkedin, mdiReddit, mdiTwitter } from '@mdi/js';
+import { FaTelegram } from 'react-icons/fa';
 
 export default function SocialPanel() {
     return (
@@ -12,17 +17,18 @@ export default function SocialPanel() {
                     {/* Left Column */}
                     <Box width={{ md: 0.5, sm: 0.5, xs: 1 }}>
                         <Stack spacing={1}>
-                            <Link />
-                            <Link />
-                            <Link />
+                            <Link label='WhatsApp' link={LinkSocial_WhatsApp} icon={<Icon path={mdiWhatsapp} size={1} />} />
+                            <Link label='Instagram' link={LinkSocial_Instagram} icon={<Icon path={mdiInstagram} size={1} />} />
+                            <Link label='LinkedIn' link={LinkSocial_LinkedIn} icon={<Icon path={mdiLinkedin} size={1} />} />
                         </Stack>
                     </Box>
 
                     {/* Right Column */}
                     <Box width={{ md: 0.5, sm: 0.5, xs: 1 }}>
                         <Stack spacing={1}>
-                            <Link />
-                            <Link />
+                            <Link label='Reddit' link={LinkSocial_Reddit} icon={<Icon path={mdiReddit} size={1} />} />
+                            <Link label='Telegram' link={LinkSocial_Telegram} icon={<FaTelegram size='85%' />} />
+                            <Link label='Twitter' link={LinkSocial_Twitter} icon={<Icon path={mdiTwitter} size={1} />} />
                         </Stack>
                     </Box>
                 </Stack>

@@ -1,6 +1,7 @@
 export const LinkDefault = '#';
 export const LinkSchool_LEO2External = 'https://rpfs.rp.edu.sg/adfs/ls/?wa=wsignin1.0&wtrealm=https%3a%2f%2fmyleo.rp.edu.sg%2f&wreply=https%3a%2f%2fmyleo.rp.edu.sg%2fCoreBase%2fLogin%2fADFSAutoLogin%3fReturnUrl%3d%252FCoreBase%252FHome%252FIndex';
 export const LinkSchool_LEO2Internal = 'https://myleo.rp.edu.sg/CoreBase/Login/Index';
+export const LinkSchool_StudentPortal = 'https://students.rp.edu.sg/';
 export const LinkDevelopment_GitHub = 'https://github.com/';
 export const LinkEntertainment_Youtube = 'https://www.youtube.com/?gl=SG';
 export const LinkEntertainment_Netflix = 'https://www.netflix.com/sg/browse/genre/34399';
@@ -10,4 +11,9 @@ export const LinkEntertainment_DisneyPlus = 'https://www.disneyplus.com/en-gb/ho
 export const LinkEntertainment_Spotify = 'https://open.spotify.com/';
 export const LinkEntertainment_9Anime = 'https://9anime.pl';
 export const LinkEntertainment_BFlix = 'www8.bflix.to';
-export const LinkSchool_StudentPortal = 'https://students.rp.edu.sg/';
+export const LinkSocial_Reddit = 'https://old.reddit.com/';
+export const LinkSocial_Instagram = 'https://www.instagram.com/?hl=en';
+export const LinkSocial_Twitter = 'https://twitter.com/home?lang=en';
+export const LinkSocial_LinkedIn = 'https://www.linkedin.com/in/tituslim-exrion/';
+export const LinkSocial_Telegram = 'https://web.telegram.org/z/';
+export const LinkSocial_WhatsApp = 'https://web.whatsapp.com/';

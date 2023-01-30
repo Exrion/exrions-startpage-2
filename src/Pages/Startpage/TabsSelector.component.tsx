@@ -10,7 +10,7 @@ function a11yProps(index: number) {
 function LabelTypography(label: string) {
     return (
         <>
-            <Typography fontFamily='Roboto' fontWeight={400}>{label}</Typography>
+            <Typography noWrap fontFamily='Roboto' fontWeight={400}>{label}</Typography>
         </>
     );
 }
