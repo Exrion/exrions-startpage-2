@@ -27,7 +27,8 @@ export default function TabsSelector(props: TabSelectorProps) {
         <>
             <Tabs
                 orientation='vertical'
-                variant='standard'
+                variant="scrollable"
+                scrollButtons={false}
                 sx={TabsSelectorSx}
                 value={active}
                 onChange={handleChange}
