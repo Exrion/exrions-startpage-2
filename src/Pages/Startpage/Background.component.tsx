@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import BackgroundImageSkeleton from "../../Components/Skeletons/BackgroundImageSkeleton.component";
 import { UnsplashResponse } from "../../Interfaces/UnsplashResponse";
 import { HttpGet } from "../../Utilities/HttpHelper";
@@ -31,7 +31,6 @@ async function GetImage() {
 
 export default function BackgroundComponent({ children }: { children: React.ReactNode | React.ReactNode[]; }) {
     const [bgLoad, setBgLoad] = useState(false);
-    const [imgUrl, setImgUrl] = useState(jsonSample.urls.full);
     const [imgSource, setImgSource] = useState(jsonSample.links.html);
     const imgSourceStr = 'Unsplash';
     const [imgAuthor, setImgAuthor] = useState(jsonSample.user.links.html);
@@ -41,9 +40,16 @@ export default function BackgroundComponent({ children }: { children: React.Reac
     if (process.env.NODE_ENV !== 'development') utmAppName = 'exrions-startpage-2';
     const utmStr = `?utm_source=${utmAppName}&utm_medium=referral`;
 
-    const setBackground = () => {
+    const setBackground = (imgUrl: string) => {
         const bgDiv = document.getElementById('bgDiv')!;
-        bgDiv.style.background = `url(${imgUrl}) no-repeat center center fixed`;
+
+        // ENV
+        if (process.env.NODE_ENV !== 'development') {
+            bgDiv.style.background = `url(${imgUrl}) no-repeat center center fixed`;
+        } else {
+            bgDiv.style.background = `url(${jsonSample.urls.full}) no-repeat center center fixed`;
+        }
+
         bgDiv.style.backgroundColor = '#161616';
         bgDiv.style.position = 'absolute';
         bgDiv.style.backgroundSize = 'cover';
@@ -70,16 +76,15 @@ export default function BackgroundComponent({ children }: { children: React.Reac
         // Load Background Image
         GetImage().then((res: UnsplashResponse) => {
             if (process.env.NODE_ENV !== 'development') {
-                setImgUrl(res.urls.full);
+                setBackground(res.urls.full);
                 setImgSource(res.links.html);
                 setImgAuthor(res.user.links.html);
                 setImgAuthorStr(res.user.name);
             }
-            setBackground();
         }).catch(e => {
             console.log(e);
-        })
-    }, [])
+        });
+    }, []);
 
     return (
         <>
