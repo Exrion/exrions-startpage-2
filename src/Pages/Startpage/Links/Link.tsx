@@ -1,4 +1,4 @@
-import { Divider, Paper, Stack, Typography } from "@mui/material";
+import { Box, Divider, Paper, Stack, Typography } from "@mui/material";
 import { LinkDefault } from "../../../Data/Constants/Portfolio/TabPanelLinks";
 import { LinkPaperSx, LinkStyle } from "../../../Styles/Elements/Startpage/StartpageRootStyles";
 import LanguageIcon from '@mui/icons-material/Language';
@@ -19,7 +19,14 @@ export default function Link(props: LinkProps) {
                         direction='row'
                         spacing={1}
                     >
-                        {icon ? icon : <LanguageIcon />}
+                        <Box
+                            display='flex'
+                            justifyContent='center'
+                            alignItems='center'
+                            width='6%'
+                        >
+                            {icon ? icon : <LanguageIcon />}
+                        </Box>
                         <Divider orientation="vertical" flexItem />
                         <Typography variant="body1">{label ? label : 'PLACEHOLDER'}</Typography>
                     </Stack>
