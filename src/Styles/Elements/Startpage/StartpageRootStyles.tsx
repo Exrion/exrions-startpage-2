@@ -25,3 +25,16 @@ export const LinkPaperSx = {
 export const LinkStyle = {
     textDecoration: 'none'
 }
+
+export const UnsplashAnchorStyle = {
+    color: 'white',
+}
+
+export const UnsplashSourceSx = {
+    position: 'absolute',
+    margin: 0,
+    top: 'auto',
+    right: 10,
+    bottom: 10,
+    left: 'auto',
+}

@@ -4,9 +4,10 @@ export interface ResponseBundle {
 }
 
 export async function HttpGet(
-    path: string
+    path: string,
+    data?: {}
 ) {
-    let res = await fetch(path);
+    let res = await fetch(path, data);
 
     if (res.status === 200) {
         let data: any = await res.json();
