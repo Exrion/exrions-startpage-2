@@ -47,7 +47,7 @@ export default function BackgroundComponent({ children }: { children: React.Reac
         if (process.env.NODE_ENV !== 'development') {
             bgDiv.style.background = `url(${imgUrl}) no-repeat center center fixed`;
         } else {
-            bgDiv.style.background = `url(${jsonSample.urls.full}) no-repeat center center fixed`;
+            bgDiv.style.background = `url(${imgUrl}) no-repeat center center fixed`;
         }
 
         bgDiv.style.backgroundColor = '#161616';
@@ -58,7 +58,6 @@ export default function BackgroundComponent({ children }: { children: React.Reac
         bgDiv.style.width = '100';
         bgDiv.style.height = '100';
         bgDiv.style.boxSizing = 'inherit';
-
         setBgLoad(true);
     }
 
@@ -80,6 +79,8 @@ export default function BackgroundComponent({ children }: { children: React.Reac
                 setImgSource(res.links.html);
                 setImgAuthor(res.user.links.html);
                 setImgAuthorStr(res.user.name);
+            } else {
+                setBackground(jsonSample.urls.full);
             }
         }).catch(e => {
             console.log(e);
