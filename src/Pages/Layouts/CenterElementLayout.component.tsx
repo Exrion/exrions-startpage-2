@@ -6,6 +6,7 @@ export default function CenterElement({ children }: { children: React.ReactNode 
             <Box
                 display='flex'
                 flexDirection='column'
+                overflow='auto'
                 height={1}
                 width={1}
             >
