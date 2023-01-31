@@ -1,6 +1,5 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
-import { defaultRoute } from "../../Data/Constants/Routes";
+import PortfolioGrid from "./_PortfolioGrid.component";
 
 export default function PortfolioLayout() {
     const DOCUMENT_TITLE = "Exrion's Portfolio";
@@ -11,8 +10,7 @@ export default function PortfolioLayout() {
 
     return (
         <>
-            portfolio
-            <Link to={defaultRoute}>startpage</Link>
+            <PortfolioGrid />
         </>
     );
 }
