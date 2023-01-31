@@ -1,5 +1,5 @@
 import { Box, Divider, Paper, Stack, Typography } from "@mui/material";
-import { LinkDefault } from "../../../Data/Constants/Portfolio/TabPanelLinks";
+import { LinkDefault } from "../../../Data/Constants/Startpage/TabPanelLinks";
 import { LinkPaperSx, LinkStyle } from "../../../Styles/Elements/Startpage/StartpageRootStyles";
 import LanguageIcon from '@mui/icons-material/Language';
 import { LinkProps } from '../../../Interfaces/LinkProps';

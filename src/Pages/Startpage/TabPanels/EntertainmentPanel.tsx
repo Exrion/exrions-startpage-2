@@ -1,6 +1,6 @@
 import { YouTube } from "@mui/icons-material";
 import { Box, Stack, Typography } from "@mui/material";
-import { LinkEntertainment_9Anime, LinkEntertainment_BFlix, LinkEntertainment_DisneyPlus, LinkEntertainment_Netflix, LinkEntertainment_PrimeTV, LinkEntertainment_Spotify, LinkEntertainment_Twitch, LinkEntertainment_Youtube } from "../../../Data/Constants/Portfolio/TabPanelLinks";
+import { LinkEntertainment_9Anime, LinkEntertainment_BFlix, LinkEntertainment_DisneyPlus, LinkEntertainment_Netflix, LinkEntertainment_PrimeTV, LinkEntertainment_Spotify, LinkEntertainment_Twitch, LinkEntertainment_Youtube } from "../../../Data/Constants/Startpage/TabPanelLinks";
 import Link from "../Links/Link";
 import { RiMickeyFill } from 'react-icons/ri';
 import Icon from '@mdi/react';

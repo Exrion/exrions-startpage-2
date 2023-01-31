@@ -1,5 +1,5 @@
 import { Box, Stack, Typography } from "@mui/material";
-import { LinkSocial_Instagram, LinkSocial_LinkedIn, LinkSocial_Reddit, LinkSocial_Telegram, LinkSocial_Twitter, LinkSocial_WhatsApp } from "../../../Data/Constants/Portfolio/TabPanelLinks";
+import { LinkSocial_Instagram, LinkSocial_LinkedIn, LinkSocial_Reddit, LinkSocial_Telegram, LinkSocial_Twitter, LinkSocial_WhatsApp } from "../../../Data/Constants/Startpage/TabPanelLinks";
 import Link from "../Links/Link";
 import Icon from '@mdi/react';
 import { mdiWhatsapp, mdiInstagram, mdiLinkedin, mdiReddit, mdiTwitter } from '@mdi/js';

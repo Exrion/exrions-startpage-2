@@ -1,7 +1,7 @@
 import { mdiSchool, mdiAccountSchoolOutline, mdiNoteMultiple, mdiServerNetwork, mdiPalmTree, mdiShopping } from "@mdi/js";
 import Icon from "@mdi/react";
 import { Box, Stack, Typography } from "@mui/material";
-import { LinkSchool_LEO2External, LinkSchool_StudentPortal, LinkSchool_LEO2Internal, LinkSchool_SA2, LinkSchool_Intranet, LinkSchool_Oasis, LinkSchool_POLITE } from "../../../Data/Constants/Portfolio/TabPanelLinks";
+import { LinkSchool_LEO2External, LinkSchool_StudentPortal, LinkSchool_LEO2Internal, LinkSchool_SA2, LinkSchool_Intranet, LinkSchool_Oasis, LinkSchool_POLITE } from "../../../Data/Constants/Startpage/TabPanelLinks";
 import Link from "../Links/Link";
 
 export default function SchoolPanel() {

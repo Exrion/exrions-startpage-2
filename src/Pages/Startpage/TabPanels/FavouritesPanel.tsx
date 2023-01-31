@@ -1,5 +1,5 @@
 import { Box, Stack, Typography } from "@mui/material";
-import { LinkDevelopment_GitHub, LinkSchool_LEO2External, LinkSchool_LEO2Internal, LinkEntertainment_Youtube, LinkSchool_StudentPortal } from "../../../Data/Constants/Portfolio/TabPanelLinks";
+import { LinkDevelopment_GitHub, LinkSchool_LEO2External, LinkSchool_LEO2Internal, LinkEntertainment_Youtube, LinkSchool_StudentPortal } from "../../../Data/Constants/Startpage/TabPanelLinks";
 import Icon from '@mdi/react';
 import { mdiYoutube,  mdiGithub, mdiAccountSchoolOutline, mdiSchool } from '@mdi/js';
 import Link from "../Links/Link";

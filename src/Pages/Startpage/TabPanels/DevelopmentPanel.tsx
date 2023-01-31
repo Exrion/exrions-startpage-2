@@ -1,7 +1,7 @@
 import { mdiGithub, mdiMicrosoftAzureDevops, mdiMaterialUi, mdiTailwind, mdiServer, mdiApi } from "@mdi/js";
 import Icon from "@mdi/react";
 import { Box, Stack, Typography } from "@mui/material";
-import { LinkDevelopment_DevOps, LinkDevelopment_GitHub, LinkDevelopment_MUI, LinkDevelopment_Tailwind, LinkDevelopment_Unsplash, LinkDevelopment_Vercel } from "../../../Data/Constants/Portfolio/TabPanelLinks";
+import { LinkDevelopment_DevOps, LinkDevelopment_GitHub, LinkDevelopment_MUI, LinkDevelopment_Tailwind, LinkDevelopment_Unsplash, LinkDevelopment_Vercel } from "../../../Data/Constants/Startpage/TabPanelLinks";
 import Link from "../Links/Link";
 
 export default function DevelopmentPanel() {
