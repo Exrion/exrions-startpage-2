@@ -1,7 +1,12 @@
+import SectionContainer from "../Shared/SectionContainer.component";
+
 export default function FooterLayout() {
     return (
         <>
-            Footer
+            <SectionContainer>
+                Footer
+            </SectionContainer>
+
         </>
     );
 }

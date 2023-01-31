@@ -1,7 +1,11 @@
+import SectionContainer from "../Shared/SectionContainer.component";
+
 export default function MainLayout() {
     return (
         <>
-            Main
+            <SectionContainer>
+                Main
+            </SectionContainer>
         </>
     );
 }

@@ -1,5 +1,5 @@
 import { Box, Stack } from "@mui/system";
-import { RootBoxSx, RootStackSx } from "../../Styles/Elements/Portfolio/PortfolioRootStyles";
+import { RootBoxSx, RootStackSpacing, RootStackSx } from "../../Styles/Elements/Portfolio/PortfolioRootStyles";
 import FooterLayout from "./Footer/FooterLayout.component";
 import MainLayout from "./Main/MainLayout.component";
 import NavLayout from "./Navbar/NavLayout.component";
@@ -11,8 +11,7 @@ export default function PortfolioGrid() {
                 sx={RootBoxSx}
             >
                 <Stack
-                    spacing={2}
-                    width={1}
+                    spacing={RootStackSpacing}
                     sx={RootStackSx}
                 >
                     {/* Navigation Bar */}
