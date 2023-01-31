@@ -2,7 +2,7 @@ import { Box, Divider, Paper, Stack, Typography } from "@mui/material";
 import { LinkDefault } from "../../../Data/Constants/Startpage/TabPanelLinks";
 import { LinkPaperSx, LinkStyle } from "../../../Styles/Elements/Startpage/StartpageRootStyles";
 import LanguageIcon from '@mui/icons-material/Language';
-import { LinkProps } from '../../../Interfaces/LinkProps';
+import { LinkProps } from '../../../Interfaces/Startpage/LinkProps';
 
 export default function Link(props: LinkProps) {
     const PAPER_BASE_ELEVATION = 2;

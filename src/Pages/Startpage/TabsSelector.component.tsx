@@ -1,5 +1,5 @@
 import { Tab, Tabs, Typography } from "@mui/material";
-import TabSelectorProps from '../../Interfaces/TabSelectorProps';
+import TabSelectorProps from '../../Interfaces/Startpage/TabSelectorProps';
 import { TabsSelectorSx } from "../../Styles/Elements/Startpage/StartpageRootStyles";
 
 function a11yProps(index: number) {

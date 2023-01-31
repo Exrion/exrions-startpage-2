@@ -1,4 +1,4 @@
-import { Quotable } from "../../Interfaces/QuotableResponse";
+import { Quotable } from "../../Interfaces/Startpage/QuotableResponse";
 import { useEffect, useMemo, useState } from "react";
 import { HttpGet } from "../../Utilities/HttpHelper";
 import Typography from "@mui/material/Typography";

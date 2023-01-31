@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import { useMemo, useState } from "react";
 import BackgroundImageSkeleton from "../../Components/Skeletons/BackgroundImageSkeleton.component";
-import { UnsplashResponse } from "../../Interfaces/UnsplashResponse";
+import { UnsplashResponse } from "../../Interfaces/Startpage/UnsplashResponse";
 import { HttpGet } from "../../Utilities/HttpHelper";
 import jsonSample from '../../Data/Constants/DevUnsplashResponse.json';
 import { UnsplashAnchorStyle, UnsplashSourceSx } from "../../Styles/Elements/Startpage/StartpageRootStyles";
