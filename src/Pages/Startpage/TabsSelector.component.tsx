@@ -25,20 +25,20 @@ export default function TabsSelector(props: TabSelectorProps) {
 
     return (
         <>
-            <Tabs
-                orientation='vertical'
-                variant="scrollable"
-                scrollButtons={false}
-                sx={TabsSelectorSx}
-                value={active}
-                onChange={handleChange}
-            >
-                <Tab label={LabelTypography('Favourites')} {...a11yProps(0)} />
-                <Tab label={LabelTypography('Entertainment')} {...a11yProps(1)} />
-                <Tab label={LabelTypography('Social')} {...a11yProps(2)} />
-                <Tab label={LabelTypography('School')} {...a11yProps(3)} />
-                <Tab label={LabelTypography('Development')} {...a11yProps(4)} />
-            </Tabs>
+                <Tabs
+                    orientation='vertical'
+                    variant="scrollable"
+                    scrollButtons={false}
+                    sx={TabsSelectorSx}
+                    value={active}
+                    onChange={handleChange}
+                >
+                    <Tab label={LabelTypography('Favourites')} {...a11yProps(0)} />
+                    <Tab label={LabelTypography('Entertainment')} {...a11yProps(1)} />
+                    <Tab label={LabelTypography('Social')} {...a11yProps(2)} />
+                    <Tab label={LabelTypography('School')} {...a11yProps(3)} />
+                    <Tab label={LabelTypography('Development')} {...a11yProps(4)} />
+                </Tabs>
         </>
     );
 }

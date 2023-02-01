@@ -40,10 +40,11 @@ export const UnsplashSourceSx = {
 }
 
 export const TabsPanelSx = {
-    height: {md: '15.5vw', sm: '15.5vw', xs: '40vw'},
-    overflow: 'scroll'
+    height: { xl: '13vw', md: '15.5vw', sm: '15.5vw', xs: '40vw' },
+    overflowY: 'auto',
+    overflowX: 'auto',
 }
 
 export const TabsSelectorSx = {
-    height: {md: '15.5vw', sm: '15.5vw', xs: '55vw'}
+    height: { xl: '13vw', md: '15.5vw', sm: '15.5vw', xs: '55vw' },
 }
