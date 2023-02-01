@@ -18,3 +18,12 @@ export const RootStackSpacing = {
     sm: 2,
     xs: 2
 }
+
+export const LinkSx = {
+    color: 'text.primary',
+    textDecoration: 'none',
+    '&:hover': {
+        color: 'primary.main',
+        transition: '0.3s'
+    }
+}

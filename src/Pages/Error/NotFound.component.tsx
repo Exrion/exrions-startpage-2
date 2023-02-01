@@ -1,7 +1,7 @@
 import { Box, Container, Grid, Typography, Button } from "@mui/material";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { defaultRoute } from "../../Data/Constants/Routes";
+import { startpageDefaultRoute } from "../../Data/Constants/Routes";
 import error404Image from './../../Data/Images/Errors/404.jpg';
 
 export default function NotFoundError() {
@@ -31,7 +31,7 @@ export default function NotFoundError() {
                                 The page you’re looking for doesn’t exist.
                             </Typography>
                             <Typography variant="body1">
-                                <Link to={defaultRoute} style={{textDecoration: 'none'}}>
+                                <Link to={startpageDefaultRoute} style={{textDecoration: 'none'}}>
                                     Back Home
                                 </Link>
                             </Typography>

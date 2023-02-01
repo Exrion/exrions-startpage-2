@@ -1,5 +1,5 @@
 import { Route, Routes, useLocation } from "react-router-dom";
-import { catchAllRoute, defaultRoute, portfolioRoute } from "../Data/Constants/Routes";
+import { catchAllRoute, startpageDefaultRoute, portfolioDefaultRoute } from "../Data/Constants/Routes";
 import { ThemeProvider } from "@emotion/react";
 import { CssBaseline, responsiveFontSizes } from "@mui/material";
 import NotFoundError from "./Error/NotFound.component";
@@ -22,7 +22,7 @@ export default function RootLayout() {
         <>
             <Routes location={location}>
                 {/* Startpage */}
-                <Route path={defaultRoute} element={
+                <Route path={startpageDefaultRoute} element={
                     <ThemeProvider theme={responsiveStartpageTheme}>
                         <CssBaseline />
                         <StartpageLayout />
@@ -30,7 +30,7 @@ export default function RootLayout() {
                 } />
 
                 {/* Portfolio */}
-                <Route path={portfolioRoute} element={
+                <Route path={portfolioDefaultRoute} element={
                     <ThemeProvider theme={responsivePortfolioTheme}>
                         <CssBaseline />
                         <PortfolioLayout />
