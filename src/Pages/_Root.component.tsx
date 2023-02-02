@@ -1,5 +1,5 @@
 import { Route, Routes, useLocation } from "react-router-dom";
-import { catchAllRoute, startpageDefaultRoute, portfolioDefaultRoute } from "../Data/Constants/Routes";
+import { catchAllRoute, startpageDefaultRoute, portfolioDefaultRoute, portfolioAboutRoute, portfolioActivityRoute, portfolioContactRoute, portfolioShowcaseRoute } from "../Data/Constants/Routes";
 import { ThemeProvider } from "@emotion/react";
 import { CssBaseline, responsiveFontSizes } from "@mui/material";
 import NotFoundError from "./Error/NotFound.component";

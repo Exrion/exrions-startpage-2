@@ -20,10 +20,28 @@ export const RootStackSpacing = {
 }
 
 export const LinkSx = {
+    position: 'relative', 
     color: 'text.primary',
     textDecoration: 'none',
     '&:hover': {
         color: 'primary.main',
-        transition: '0.3s'
-    }
+        transition: 'all 0.3s ease-in-out'
+    },   
+    '&:before': {
+        content: "''",
+        position: 'absolute',
+        width: '0',
+        height: '2px',
+        bottom: '-2px',
+        left: '50%',
+        transform: 'translate(-50%,0%)',
+        backgroundColor: 'primary.main',
+        transformOrigin: 'center',
+        visibility: 'hidden',
+        transition: 'all 0.3s ease-in-out',
+      },
+      '&:hover:before': {
+        visibility: 'visible',
+        width: '100%',
+      }
 }
