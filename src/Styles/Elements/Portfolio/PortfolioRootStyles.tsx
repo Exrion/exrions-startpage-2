@@ -20,13 +20,13 @@ export const RootStackSpacing = {
 }
 
 export const LinkSx = {
-    position: 'relative', 
+    position: 'relative',
     color: 'text.primary',
     textDecoration: 'none',
     '&:hover': {
         color: 'primary.main',
         transition: 'all 0.3s ease-in-out'
-    },   
+    },
     '&:before': {
         content: "''",
         position: 'absolute',
@@ -39,9 +39,20 @@ export const LinkSx = {
         transformOrigin: 'center',
         visibility: 'hidden',
         transition: 'all 0.3s ease-in-out',
-      },
-      '&:hover:before': {
+    },
+    '&:hover:before': {
         visibility: 'visible',
         width: '100%',
-      }
+    }
+}
+
+export const CloseButtonDrawerSx = {
+    color: 'gray',
+    position: 'absolute',
+    margin: 0,
+    top: 10,
+    right: 10,
+    bottom: 'auto',
+    left: 'auto',
+    zIndex: 'fab'
 }

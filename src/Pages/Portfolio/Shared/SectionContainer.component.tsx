@@ -7,7 +7,7 @@ export default function SectionContainer({ children }: { children: React.ReactNo
             <Box
                 display='flex'
                 justifyContent='center'
-                minWidth={{ md: '75vw', sm: '80vw', xs: '90vw' }}
+                minWidth={{ md: '75vw', sm: '80vw', xs: '100vw' }}
             >
                 {children}
             </Box>
