@@ -1,11 +1,12 @@
 import { Box, Container, Grid, Typography, Button } from "@mui/material";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { startpageDefaultRoute } from "../../Data/Constants/Routes";
 import error404Image from './../../Data/Images/Errors/404.jpg';
 
 export default function NotFoundError() {
     const DOCUMENT_TITLE = '404 Not Found';
+    const navigate = useNavigate();
 
     useEffect(() => {
       document.title = DOCUMENT_TITLE;
@@ -31,9 +32,9 @@ export default function NotFoundError() {
                                 The page you’re looking for doesn’t exist.
                             </Typography>
                             <Typography variant="body1">
-                                <Link to={startpageDefaultRoute} style={{textDecoration: 'none'}}>
-                                    Back Home
-                                </Link>
+                                <Button onClick={() => {navigate(-1)}} variant='contained' size='small'>
+                                    Back
+                                </Button>
                             </Typography>
                         </Grid>
                         <Grid xs={6}>
