@@ -77,7 +77,7 @@ export default function HomePage() {
                             textAlign='left'
                             maxWidth={0.75}
                         >
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique venenatis tortor vestibulum ultricies. Pellentesque rutrum sed felis quis pharetra. Proin nisi orci, posuere nec lacinia eget, tincidunt nec quam. Nunc mi turpis, mattis id blandit sed, cursus vel lacus.
+                            I am an aspiring UI/UX Designer and Front-End Web Developer currently studying at Republic Polytechnic. I hope to create experiences that are inclusive of people from all walks of life.
                         </Typography>
                     </Fade>
                 </Stack>
@@ -92,10 +92,12 @@ export default function HomePage() {
                         <Link
                             component={RouterLink}
                             to={portfolioShowcaseRoute}
+                            underline='none'
                         >
                             <Button
                                 variant='outlined'
                                 size='medium'
+                                tabIndex={-1}
                             >
                                 Check out my work
                             </Button>

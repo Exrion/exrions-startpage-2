@@ -1,3 +1,4 @@
 export interface DrawerProps {
-    handleDrawer: (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => void
+    handleDrawer: (open: boolean, active?: string) => (event: React.KeyboardEvent | React.MouseEvent) => void
+    active: string
 }

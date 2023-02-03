@@ -13,7 +13,7 @@ import { portfolioDefaultRoute, portfolioActivityRoute, portfolioShowcaseRoute, 
 
 export default function DrawerItems(props: DrawerProps) {
     const { height, width } = useWindowDimensions();
-    const { handleDrawer } = props;
+    const { handleDrawer, active } = props;
 
     return (
         <>
@@ -23,7 +23,7 @@ export default function DrawerItems(props: DrawerProps) {
                 {/* Close Button */}
                 <Button
                     sx={CloseButtonDrawerSx}
-                    onClick={handleDrawer(false)}
+                    onClick={handleDrawer(false, active)}
                     disableRipple
                 >
                     <CloseIcon fontSize='large' />
@@ -38,7 +38,7 @@ export default function DrawerItems(props: DrawerProps) {
                     {/* Links */}
                     <Box>
                         <List>
-                            <ListItem onClick={handleDrawer(false)}>
+                            <ListItem onClick={handleDrawer(false, 'home')}>
                                 <Link
                                     component={RouterLink}
                                     to={portfolioDefaultRoute}
@@ -46,19 +46,19 @@ export default function DrawerItems(props: DrawerProps) {
                                 >
                                     <ListItemButton disableRipple>
                                         <ListItemIcon>
-                                            <HomeIcon fontSize='large' />
+                                            <HomeIcon fontSize='large' sx={{color: active === 'home' ? 'primary.main' : 'GrayText'}} />
                                         </ListItemIcon>
                                         <ListItemText
                                             primaryTypographyProps={{
                                                 variant: 'h2',
-                                                color: 'GrayText'
+                                                color: active === 'home' ? 'primary.main' : 'GrayText'
                                             }}
                                             primary='Home'
                                         />
                                     </ListItemButton>
                                 </Link>
                             </ListItem>
-                            <ListItem onClick={handleDrawer(false)}>
+                            <ListItem onClick={handleDrawer(false, 'activity')}>
                                 <Link
                                     component={RouterLink}
                                     to={portfolioActivityRoute}
@@ -66,19 +66,19 @@ export default function DrawerItems(props: DrawerProps) {
                                 >
                                     <ListItemButton disableRipple>
                                         <ListItemIcon>
-                                            <CodeIcon fontSize='large' />
+                                            <CodeIcon fontSize='large' sx={{color: active === 'activity' ? 'primary.main' : 'GrayText'}} />
                                         </ListItemIcon>
                                         <ListItemText
                                             primaryTypographyProps={{
                                                 variant: 'h2',
-                                                color: 'GrayText'
+                                                color: active === 'activity' ? 'primary.main' : 'GrayText'
                                             }}
                                             primary='Activity'
                                         />
                                     </ListItemButton>
                                 </Link>
                             </ListItem>
-                            <ListItem onClick={handleDrawer(false)}>
+                            <ListItem onClick={handleDrawer(false, 'showcase')}>
                                 <Link
                                     component={RouterLink}
                                     to={portfolioShowcaseRoute}
@@ -86,19 +86,19 @@ export default function DrawerItems(props: DrawerProps) {
                                 >
                                     <ListItemButton disableRipple>
                                         <ListItemIcon>
-                                            <CollectionsIcon fontSize='large' />
+                                            <CollectionsIcon fontSize='large' sx={{color: active === 'showcase' ? 'primary.main' : 'GrayText'}} />
                                         </ListItemIcon>
                                         <ListItemText
                                             primaryTypographyProps={{
                                                 variant: 'h2',
-                                                color: 'GrayText'
+                                                color: active === 'showcase' ? 'primary.main' : 'GrayText'
                                             }}
                                             primary='Showcase'
                                         />
                                     </ListItemButton>
                                 </Link>
                             </ListItem>
-                            <ListItem onClick={handleDrawer(false)}>
+                            <ListItem onClick={handleDrawer(false, 'about')}>
                                 <Link
                                     component={RouterLink}
                                     to={portfolioAboutRoute}
@@ -106,12 +106,12 @@ export default function DrawerItems(props: DrawerProps) {
                                 >
                                     <ListItemButton disableRipple>
                                         <ListItemIcon>
-                                            <InfoIcon fontSize='large' />
+                                            <InfoIcon fontSize='large' sx={{color: active === 'about' ? 'primary.main' : 'GrayText'}} />
                                         </ListItemIcon>
                                         <ListItemText
                                             primaryTypographyProps={{
                                                 variant: 'h2',
-                                                color: 'GrayText'
+                                                color: active === 'about' ? 'primary.main' : 'GrayText'
                                             }}
                                             primary='About'
                                         />

@@ -46,6 +46,40 @@ export const LinkSx = {
     }
 }
 
+export const LinkActiveItem = {
+    color: 'primary.main',
+    '&:before': {
+        content: "''",
+        position: 'absolute',
+        width: '100%',
+        height: '2px',
+        bottom: '-2px',
+        left: '50%',
+        transform: 'translate(-50%,0%)',
+        backgroundColor: 'primary.main',
+        transformOrigin: 'center',
+        visibility: 'visible',
+        transition: 'all 0.3s ease-in-out',
+    }
+}
+
+export const LinkInactiveItem = {
+    color: 'text.primary',
+    '&:before': {
+        content: "''",
+        position: 'absolute',
+        width: '0',
+        height: '2px',
+        bottom: '-2px',
+        left: '50%',
+        transform: 'translate(-50%,0%)',
+        backgroundColor: 'primary.main',
+        transformOrigin: 'center',
+        visibility: 'hidden',
+        transition: 'all 0.3s ease-in-out',
+    }
+}
+
 export const CloseButtonDrawerSx = {
     color: 'gray',
     position: 'absolute',
