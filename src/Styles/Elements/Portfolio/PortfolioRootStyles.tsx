@@ -1,6 +1,7 @@
 export const RootBoxSx = {
     display: 'flex',
-    py: { md: 6, sm: 3, xs: 0 }
+    py: { md: 6, sm: 3, xs: 0 },
+    mb: { md: 0, sm: 0, xs: 9}
 }
 
 export const RootStackSx = {
@@ -89,4 +90,16 @@ export const CloseButtonDrawerSx = {
     bottom: 'auto',
     left: 'auto',
     zIndex: 'fab'
+}
+
+export const FooterAnchorStyle = {
+    color: 'gray',
+    'text-decoration': 'none'
+}
+
+export const FooterBoxSx = {
+    position: 'fixed',
+    bottom: 0,
+    left: 0,
+    right: 0    
 }
