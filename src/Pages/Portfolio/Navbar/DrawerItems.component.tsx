@@ -38,7 +38,7 @@ export default function DrawerItems(props: DrawerProps) {
                     {/* Links */}
                     <Box>
                         <List>
-                            <ListItem>
+                            <ListItem onClick={handleDrawer(false)}>
                                 <Link
                                     component={RouterLink}
                                     to={portfolioDefaultRoute}
@@ -58,7 +58,7 @@ export default function DrawerItems(props: DrawerProps) {
                                     </ListItemButton>
                                 </Link>
                             </ListItem>
-                            <ListItem>
+                            <ListItem onClick={handleDrawer(false)}>
                                 <Link
                                     component={RouterLink}
                                     to={portfolioActivityRoute}
@@ -78,7 +78,7 @@ export default function DrawerItems(props: DrawerProps) {
                                     </ListItemButton>
                                 </Link>
                             </ListItem>
-                            <ListItem>
+                            <ListItem onClick={handleDrawer(false)}>
                                 <Link
                                     component={RouterLink}
                                     to={portfolioShowcaseRoute}
@@ -98,7 +98,7 @@ export default function DrawerItems(props: DrawerProps) {
                                     </ListItemButton>
                                 </Link>
                             </ListItem>
-                            <ListItem>
+                            <ListItem onClick={handleDrawer(false)}>
                                 <Link
                                     component={RouterLink}
                                     to={portfolioAboutRoute}

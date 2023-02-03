@@ -1,7 +1,8 @@
-import { Box, Typography, Link, Button, AppBar, Toolbar, Drawer } from "@mui/material";
+import { Box, Typography, Link, Button, AppBar, Toolbar, Drawer, Grow, Slide } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
 import { Stack } from "@mui/system";
+import { useEffect, useState } from "react";
 import useWindowDimensions from "../../../Hooks/useWindowDimensions";
 import SectionContainer from "../Shared/SectionContainer.component";
 import { LinkSx } from "../../../Styles/Elements/Portfolio/PortfolioRootStyles";
@@ -9,7 +10,6 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import EmailIcon from '@mui/icons-material/Email';
 import MenuIcon from '@mui/icons-material/Menu';
 import { portfolioAboutRoute, portfolioActivityRoute, portfolioContactRoute, portfolioDefaultRoute, portfolioShowcaseRoute } from "../../../Data/Constants/Routes";
-import { useState } from "react";
 import DrawerItems from "./DrawerItems.component";
 
 function NavBreakpointDecider() {
@@ -40,60 +40,72 @@ function XsNavbar() {
 
     return (
         <>
-            <AppBar
-                position='sticky'
+            <Slide
+                in={true}
+                timeout={400}
+                direction='down'
             >
-                <Toolbar
-                    disableGutters
+                <AppBar
+                    position='sticky'
                 >
-                    {/* Menu Button */}
-                    <Button
-                        placeholder="Menu"
-                        sx={{ color: 'white' }}
-                        onClick={toggleDrawer(true)}
-                        disableRipple
+                    <Toolbar
+                        disableGutters
                     >
-                        <MenuIcon />
-                    </Button>
-                    <Drawer
-                        anchor='left'
-                        open={drawerState}
-                        onClose={toggleDrawer(false)}
-                    >
-                        <DrawerItems handleDrawer={toggleDrawer} />
-                    </Drawer>
-
-                    {/* Title */}
-                    <Link
-                        component={RouterLink}
-                        to={portfolioDefaultRoute}
-                        sx={{ flexGrow: 1, color: 'white' }}
-                    >
-                        <Typography>
-                            Exrion's Portfolio
-                        </Typography>
-                    </Link>
-
-                    {/* Contact Me */}
-                    <Link
-                        component={RouterLink}
-                        to={portfolioContactRoute}
-                    >
+                        {/* Menu Button */}
                         <Button
-                            placeholder="Contact Me"
+                            placeholder="Menu"
                             sx={{ color: 'white' }}
+                            onClick={toggleDrawer(true)}
                             disableRipple
                         >
-                            <EmailOutlinedIcon />
+                            <MenuIcon />
                         </Button>
-                    </Link>
-                </Toolbar>
-            </AppBar>
+                        <Drawer
+                            anchor='left'
+                            open={drawerState}
+                            onClose={toggleDrawer(false)}
+                        >
+                            <DrawerItems handleDrawer={toggleDrawer} />
+                        </Drawer>
+
+                        {/* Title */}
+                        <Link
+                            component={RouterLink}
+                            to={portfolioDefaultRoute}
+                            sx={{ flexGrow: 1, color: 'white' }}
+                        >
+                            <Typography>
+                                Exrion's Portfolio
+                            </Typography>
+                        </Link>
+
+                        {/* Contact Me */}
+                        <Link
+                            component={RouterLink}
+                            to={portfolioContactRoute}
+                        >
+                            <Button
+                                placeholder="Contact Me"
+                                sx={{ color: 'white' }}
+                                disableRipple
+                            >
+                                <EmailOutlinedIcon />
+                            </Button>
+                        </Link>
+                    </Toolbar>
+                </AppBar>
+            </Slide>
         </>
     );
 }
 
 function SmNavbar() {
+    const [loaded, setLoaded] = useState(false);
+
+    useEffect(() => {
+        setLoaded(true);
+    }, [])
+
     return (
         <>
             <Stack
@@ -113,34 +125,58 @@ function SmNavbar() {
                             direction='row'
                             spacing={{ md: 4, sm: 2 }}
                         >
-                            <Link
-                                component={RouterLink}
-                                to={portfolioDefaultRoute}
-                                sx={LinkSx}
+                            <Grow
+                                in={loaded}
+                                style={{ transformOrigin: '0 0 0' }}
+                                timeout={800}
                             >
-                                Home
-                            </Link>
-                            <Link
-                                component={RouterLink}
-                                to={portfolioActivityRoute}
-                                sx={LinkSx}
+                                <Link
+                                    component={RouterLink}
+                                    to={portfolioDefaultRoute}
+                                    sx={LinkSx}
+                                >
+                                    Home
+                                </Link>
+                            </Grow>
+                            <Grow
+                                in={loaded}
+                                style={{ transformOrigin: '0 0 0' }}
+                                timeout={1200}
                             >
-                                Activity
-                            </Link>
-                            <Link
-                                component={RouterLink}
-                                to={portfolioShowcaseRoute}
-                                sx={LinkSx}
+                                <Link
+                                    component={RouterLink}
+                                    to={portfolioActivityRoute}
+                                    sx={LinkSx}
+                                >
+                                    Activity
+                                </Link>
+                            </Grow>
+                            <Grow
+                                in={loaded}
+                                style={{ transformOrigin: '0 0 0' }}
+                                timeout={1600}
                             >
-                                Showcase
-                            </Link>
-                            <Link
-                                component={RouterLink}
-                                to={portfolioAboutRoute}
-                                sx={LinkSx}
+                                <Link
+                                    component={RouterLink}
+                                    to={portfolioShowcaseRoute}
+                                    sx={LinkSx}
+                                >
+                                    Showcase
+                                </Link>
+                            </Grow>
+                            <Grow
+                                in={loaded}
+                                style={{ transformOrigin: '0 0 0' }}
+                                timeout={2000}
                             >
-                                About
-                            </Link>
+                                <Link
+                                    component={RouterLink}
+                                    to={portfolioAboutRoute}
+                                    sx={LinkSx}
+                                >
+                                    About
+                                </Link>
+                            </Grow>
                         </Stack>
                     </Typography>
                 </Box>
@@ -153,19 +189,25 @@ function SmNavbar() {
                         color='black'
                         component='span'
                     >
-                        <Link
-                            component={RouterLink}
-                            to={portfolioContactRoute}
+                        <Grow
+                            in={loaded}
+                            style={{ transformOrigin: '0 0 0' }}
+                            timeout={2400}
                         >
-                            <Button
-                                variant='contained'
-                                startIcon={<EmailIcon />}
-                                size='medium'
-                                sx={{ borderRadius: 8 }}
+                            <Link
+                                component={RouterLink}
+                                to={portfolioContactRoute}
                             >
-                                Contact Me
-                            </Button>
-                        </Link>
+                                <Button
+                                    variant='contained'
+                                    startIcon={<EmailIcon />}
+                                    size='medium'
+                                    sx={{ borderRadius: 8 }}
+                                >
+                                    Contact Me
+                                </Button>
+                            </Link>
+                        </Grow>
                     </Typography>
                 </Box>
             </Stack>
