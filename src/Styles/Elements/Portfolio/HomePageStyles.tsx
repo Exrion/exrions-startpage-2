@@ -1,5 +1,8 @@
+export const RootStackSx = {
+    maxWidth: {md: 0.65, sm: 0.85, xs: 0.8}
+}
+
 export const IntroductionStackSx = {
-    maxWidth: {md: 0.65, sm: 0.85, xs: 0.8},
     overflow: 'hidden'
 }
 
