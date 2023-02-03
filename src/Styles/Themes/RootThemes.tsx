@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material";
-import ArchivoTtf from '../../Data/Fonts/Archivo/Archivo-Medium.ttf';
+import { archivo, breeSerif, sourceCodePro } from "../../Data/Fonts/fonts";
 
 export const startpageTheme = createTheme({
   palette: {
@@ -46,7 +46,11 @@ export const startpageTheme = createTheme({
 export const portfolioTheme = createTheme({
   typography: {
     h1: { fontSize: '5rem' },
-    fontFamily: 'Archivo, sans-serif',
+    fontFamily: [
+      'Archivo, sans-serif',
+      '"Bree Serif", serif',
+      '"Source Code Pro", monospace',
+    ].join(',')
   },
   breakpoints: {
     values: {
@@ -59,16 +63,11 @@ export const portfolioTheme = createTheme({
   },
   components: {
     MuiCssBaseline: {
-      styleOverrides: `
-        @font-face {
-          font-family: 'Raleway';
-          font-style: normal;
-          font-display: swap;
-          font-weight: 400;
-          src: local('Archivo'), local('Archivo-Medium'), url(${ArchivoTtf}) format('ttf');
-          unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
-        }
-      `,
+      styleOverrides: {
+        '@global': {
+          '@font-face': [archivo, breeSerif, sourceCodePro],
+        },
+      }
     },
   }
 });
