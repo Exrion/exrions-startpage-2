@@ -1,3 +1,5 @@
+import { Octokit } from "octokit";
+
 export interface ResponseBundle {
     errorCode: number,
     errorText?: string
@@ -32,4 +34,23 @@ export async function HttpPost(
     } else {
         return res.status;
     }
+}
+
+export async function OctoGetRepos(
+    perPage: number,
+    page: number,
+    accept: string = 'application/vnd.github+json'
+) {
+    const octokit = new Octokit({
+        auth: process.env.REACT_APP_GITHUB_API_KEY
+    });
+
+    return await octokit.request(`GET /user/repos`, {
+        headers: {
+            accept: accept
+        },
+        per_page: perPage,
+        page: page,
+        type: 'owner'
+    });
 }
