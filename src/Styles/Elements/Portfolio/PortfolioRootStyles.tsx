@@ -94,7 +94,7 @@ export const CloseButtonDrawerSx = {
 
 export const FooterAnchorStyle = {
     color: 'gray',
-    'text-decoration': 'none'
+    textDecoration: 'none'
 }
 
 export const FooterBoxSx = {
