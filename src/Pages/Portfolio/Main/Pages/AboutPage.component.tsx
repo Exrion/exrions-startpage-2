@@ -1,7 +1,13 @@
+import { Box } from "@mui/material";
+
 export default function AboutPage() {
     return (
         <>
-            About
+            <Box
+                minWidth={1}
+            >
+                
+            </Box>
         </>
     );
 }
