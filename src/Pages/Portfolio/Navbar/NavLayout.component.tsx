@@ -13,7 +13,7 @@ import { developerName } from "../../../Data/Constants/MainConstants";
 
 function XsNavbar() {
     const [drawerState, setDrawerState] = useState(false);
-    const [active, setActive] = useState('home');
+    const [active, setActive] = useState(window.location.pathname.replace('/portfolio/', ''));
 
     const toggleDrawer = (open: boolean, active: string = '') => (event: React.KeyboardEvent | React.MouseEvent) => {
         setActive(active);
@@ -99,7 +99,7 @@ function XsNavbar() {
 
 function SmNavbar() {
     const [loaded, setLoaded] = useState(false);
-    const [active, setActive] = useState('home');
+    const [active, setActive] = useState(window.location.pathname.replace('/portfolio/', ''));
 
     const activeSx = (current: string) => {
         if (current === active) {
@@ -139,17 +139,17 @@ function SmNavbar() {
                                 <Grow
                                     in={loaded}
                                     style={{ transformOrigin: '0 0 0' }}
-                                    timeout={800}
+                                    timeout={800 + 0 * 400}
                                 >
                                     <Link
                                         component={RouterLink}
                                         to={portfolioDefaultRoute}
                                         sx={{
                                             ...LinkSx,
-                                            ...activeSx('home')
+                                            ...activeSx('/portfolio')
                                         }}
                                         tabIndex={0}
-                                        onClick={() => setActive('home')}
+                                        onClick={() => setActive('/portfolio')}
                                     >
                                         Home
                                     </Link>
@@ -157,7 +157,7 @@ function SmNavbar() {
                                 <Grow
                                     in={loaded}
                                     style={{ transformOrigin: '0 0 0' }}
-                                    timeout={1200}
+                                    timeout={800 + 1 * 400}
                                 >
                                     <Link
                                         component={RouterLink}
@@ -175,7 +175,7 @@ function SmNavbar() {
                                 <Grow
                                     in={loaded}
                                     style={{ transformOrigin: '0 0 0' }}
-                                    timeout={1600}
+                                    timeout={800 + 2 * 400}
                                 >
                                     <Link
                                         component={RouterLink}
@@ -193,7 +193,7 @@ function SmNavbar() {
                                 <Grow
                                     in={loaded}
                                     style={{ transformOrigin: '0 0 0' }}
-                                    timeout={2000}
+                                    timeout={800 + 3 * 400}
                                 >
                                     <Link
                                         component={RouterLink}
@@ -223,7 +223,7 @@ function SmNavbar() {
                             <Grow
                                 in={loaded}
                                 style={{ transformOrigin: '0 0 0' }}
-                                timeout={2400}
+                                timeout={800 + 4 * 400}
                             >
                                 <Link
                                     component={RouterLink}

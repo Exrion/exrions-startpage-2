@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Link, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from "@mui/material";
+import { Box, Button, Link, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 import CloseIcon from '@mui/icons-material/Close';
 import HomeIcon from '@mui/icons-material/Home';
@@ -38,7 +38,7 @@ export default function DrawerItems(props: DrawerProps) {
                     {/* Links */}
                     <Box>
                         <List>
-                            <ListItem onClick={handleDrawer(false, 'home')}>
+                            <ListItem onClick={handleDrawer(false, '/portfolio')}>
                                 <Link
                                     component={RouterLink}
                                     to={portfolioDefaultRoute}
@@ -46,12 +46,12 @@ export default function DrawerItems(props: DrawerProps) {
                                 >
                                     <ListItemButton disableRipple>
                                         <ListItemIcon>
-                                            <HomeIcon fontSize='large' sx={{color: active === 'home' ? 'primary.main' : 'GrayText'}} />
+                                            <HomeIcon fontSize='large' sx={{color: active === '/portfolio' ? 'primary.main' : 'GrayText'}} />
                                         </ListItemIcon>
                                         <ListItemText
                                             primaryTypographyProps={{
                                                 variant: 'h2',
-                                                color: active === 'home' ? 'primary.main' : 'GrayText'
+                                                color: active === '/portfolio' ? 'primary.main' : 'GrayText'
                                             }}
                                             primary='Home'
                                         />
