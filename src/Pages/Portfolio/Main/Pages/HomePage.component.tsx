@@ -5,6 +5,7 @@ import { officialName } from "../../../../Data/Constants/MainConstants";
 import { useEffect, useRef, useState } from "react";
 import { IntroductionStackSpacing, IntroductionStackSx, RootStackSx } from "../../../../Styles/Elements/Portfolio/HomePageStyles";
 import { portfolioShowcaseRoute } from "../../../../Data/Constants/Routes";
+import { AnimationTimeout } from "../../../../Utilities/AnimationTimeout";
 
 export default function HomePage() {
     const containerRef = useRef(null);
@@ -27,7 +28,7 @@ export default function HomePage() {
                 >
                     <Fade
                         in={loaded}
-                        timeout={1200}
+                        timeout={AnimationTimeout(0)}
                     >
                         <Typography
                             variant='h6'
@@ -41,7 +42,7 @@ export default function HomePage() {
                     </Fade>
                     <Fade
                         in={loaded}
-                        timeout={1600}
+                        timeout={AnimationTimeout(1)}
                     >
                         <Typography
                             variant='h1'
@@ -54,7 +55,7 @@ export default function HomePage() {
                     </Fade>
                     <Fade
                         in={loaded}
-                        timeout={2000}
+                        timeout={AnimationTimeout(2)}
                     >
                         <Typography
                             variant='h3'
@@ -68,7 +69,7 @@ export default function HomePage() {
                     </Fade>
                     <Fade
                         in={loaded}
-                        timeout={2400}
+                        timeout={AnimationTimeout(3)}
                     >
                         <Typography
                             variant='body1'
@@ -87,7 +88,7 @@ export default function HomePage() {
                 >
                     <Fade
                         in={loaded}
-                        timeout={2800}
+                        timeout={AnimationTimeout(4)}
                     >
                         <Link
                             component={RouterLink}

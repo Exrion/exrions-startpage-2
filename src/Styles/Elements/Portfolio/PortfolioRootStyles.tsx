@@ -14,12 +14,6 @@ export const RootStackSx = {
     }
 }
 
-export const RootStackSpacing = {
-    md: 7,
-    sm: 2,
-    xs: 3
-}
-
 export const LinkSx = {
     position: 'relative',
     color: 'text.primary',

@@ -10,6 +10,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { portfolioAboutRoute, portfolioActivityRoute, portfolioContactRoute, portfolioDefaultRoute, portfolioShowcaseRoute } from "../../../Data/Constants/Routes";
 import DrawerItems from "./DrawerItems.component";
 import { developerName } from "../../../Data/Constants/MainConstants";
+import { AnimationTimeout } from "../../../Utilities/AnimationTimeout";
 
 function XsNavbar() {
     const [drawerState, setDrawerState] = useState(false);
@@ -139,7 +140,7 @@ function SmNavbar() {
                                 <Grow
                                     in={loaded}
                                     style={{ transformOrigin: '0 0 0' }}
-                                    timeout={800 + 0 * 400}
+                                    timeout={AnimationTimeout(0, 800)}
                                 >
                                     <Link
                                         component={RouterLink}
@@ -157,7 +158,7 @@ function SmNavbar() {
                                 <Grow
                                     in={loaded}
                                     style={{ transformOrigin: '0 0 0' }}
-                                    timeout={800 + 1 * 400}
+                                    timeout={AnimationTimeout(1, 800)}
                                 >
                                     <Link
                                         component={RouterLink}
@@ -175,7 +176,7 @@ function SmNavbar() {
                                 <Grow
                                     in={loaded}
                                     style={{ transformOrigin: '0 0 0' }}
-                                    timeout={800 + 2 * 400}
+                                    timeout={AnimationTimeout(2, 800)}
                                 >
                                     <Link
                                         component={RouterLink}
@@ -193,7 +194,7 @@ function SmNavbar() {
                                 <Grow
                                     in={loaded}
                                     style={{ transformOrigin: '0 0 0' }}
-                                    timeout={800 + 3 * 400}
+                                    timeout={AnimationTimeout(3, 800)}
                                 >
                                     <Link
                                         component={RouterLink}
@@ -223,7 +224,7 @@ function SmNavbar() {
                             <Grow
                                 in={loaded}
                                 style={{ transformOrigin: '0 0 0' }}
-                                timeout={800 + 4 * 400}
+                                timeout={AnimationTimeout(4, 800)}
                             >
                                 <Link
                                     component={RouterLink}
