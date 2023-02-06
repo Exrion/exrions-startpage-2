@@ -1,5 +1,5 @@
-import { Button, Fade, Link, Typography } from "@mui/material";
-import { Link as RouterLink } from "react-router-dom";
+import { Button, Fade, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import { Stack } from "@mui/system";
 import { officialName } from "../../../../Data/Constants/MainConstants";
 import { useEffect, useRef, useState } from "react";
@@ -10,6 +10,10 @@ import { AnimationTimeout } from "../../../../Utilities/AnimationTimeout";
 export default function HomePage() {
     const containerRef = useRef(null);
     const [loaded, setLoaded] = useState(false);
+    let navigate = useNavigate();
+    const routeChange = (path: string) => {
+        navigate(path);
+    }
 
     useEffect(() => {
         setLoaded(true);
@@ -90,19 +94,14 @@ export default function HomePage() {
                         in={loaded}
                         timeout={AnimationTimeout(4)}
                     >
-                        <Link
-                            component={RouterLink}
-                            to={portfolioShowcaseRoute}
-                            underline='none'
+                        <Button
+                            variant='outlined'
+                            size='medium'
+                            tabIndex={-1}
+                            disabled
                         >
-                            <Button
-                                variant='outlined'
-                                size='medium'
-                                tabIndex={-1}
-                            >
-                                Check out my work
-                            </Button>
-                        </Link>
+                            Check out my work (Fix in Progress)
+                        </Button>
                     </Fade>
                 </Typography>
             </Stack>
