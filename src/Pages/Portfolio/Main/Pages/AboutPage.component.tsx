@@ -190,7 +190,7 @@ function Journey(loaded: boolean) {
                             color='salmon'
                             fontWeight={600}
                         >
-                            My Jouruney
+                            My Journey
                         </Typography>
                     </Fade>
                     <Fade
