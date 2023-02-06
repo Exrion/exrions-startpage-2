@@ -232,6 +232,8 @@ function Journey(loaded: boolean) {
                                         align="right"
                                         variant="body2"
                                         color="text.secondary"
+                                        maxWidth={0.25}
+                                        minWidth={0.25}
                                     >
                                         April 2023
                                     </TimelineOppositeContent>
@@ -285,6 +287,8 @@ function Journey(loaded: boolean) {
                                         align="right"
                                         variant="body2"
                                         color="text.secondary"
+                                        maxWidth={0.25}
+                                        minWidth={0.25}
                                     >
                                         03 February 2022
                                     </TimelineOppositeContent>
@@ -339,6 +343,8 @@ function Journey(loaded: boolean) {
                                         align="right"
                                         variant="body2"
                                         color="text.secondary"
+                                        maxWidth={0.25}
+                                        minWidth={0.25}
                                     >
                                         19 September 2022
                                     </TimelineOppositeContent>
@@ -393,6 +399,8 @@ function Journey(loaded: boolean) {
                                         align="right"
                                         variant="body2"
                                         color="text.secondary"
+                                        maxWidth={0.25}
+                                        minWidth={0.25}
                                     >
                                         March 2019
                                     </TimelineOppositeContent>
@@ -447,6 +455,8 @@ function Journey(loaded: boolean) {
                                         align="right"
                                         variant="body2"
                                         color="text.secondary"
+                                        maxWidth={0.25}
+                                        minWidth={0.25}
                                     >
                                         January 2019
                                     </TimelineOppositeContent>
@@ -501,6 +511,8 @@ function Journey(loaded: boolean) {
                                         align="right"
                                         variant="body2"
                                         color="text.secondary"
+                                        maxWidth={0.25}
+                                        minWidth={0.25}
                                     >
                                         November 2014
                                     </TimelineOppositeContent>
