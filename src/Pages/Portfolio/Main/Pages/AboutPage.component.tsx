@@ -236,7 +236,6 @@ function Journey(loaded: boolean) {
                                         April 2023
                                     </TimelineOppositeContent>
                                     <TimelineSeparator>
-                                        <TimelineConnector />
                                         <TimelineDot>
                                             <SchoolIcon />
                                         </TimelineDot>
@@ -510,7 +509,6 @@ function Journey(loaded: boolean) {
                                         <TimelineDot>
                                             <SchoolIcon />
                                         </TimelineDot>
-                                        <TimelineConnector />
                                     </TimelineSeparator>
                                     <TimelineContent
                                         sx={{ py: '12px', px: 2 }}
