@@ -1,19 +1,13 @@
 import { Button, Fade, Typography } from "@mui/material";
-import { useNavigate } from "react-router-dom";
 import { Stack } from "@mui/system";
 import { officialName } from "../../../../Data/Constants/MainConstants";
 import { useEffect, useRef, useState } from "react";
 import { IntroductionStackSpacing, IntroductionStackSx, RootStackSx } from "../../../../Styles/Elements/Portfolio/HomePageStyles";
-import { portfolioShowcaseRoute } from "../../../../Data/Constants/Routes";
 import { AnimationTimeout } from "../../../../Utilities/AnimationTimeout";
 
 export default function HomePage() {
     const containerRef = useRef(null);
     const [loaded, setLoaded] = useState(false);
-    let navigate = useNavigate();
-    const routeChange = (path: string) => {
-        navigate(path);
-    }
 
     useEffect(() => {
         setLoaded(true);

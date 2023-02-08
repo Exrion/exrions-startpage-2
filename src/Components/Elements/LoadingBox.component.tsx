@@ -1,5 +1,4 @@
 import { Box, Card, CircularProgress, Stack, Typography } from "@mui/material";
-import CardContent from "@mui/material/CardContent";
 
 export default function LoadingBox(props: any) {
     const loadingText: string = props.loadingText;

@@ -6,11 +6,11 @@ import PortfolioLayout from "./Portfolio/_Portfolio.component";
 import StartpageLayout from "./Startpage/_Startpage.component";
 import { portfolioTheme, startpageTheme } from "../Styles/Themes/RootThemes";
 import NotFoundError from "./Error/NotFound.component";
-import { ContactPage } from "@mui/icons-material";
 import AboutPage from "./Portfolio/Main/Pages/AboutPage.component";
 import ActivityPage from "./Portfolio/Main/Pages/ActivityPage.component";
 import ShowcasePage from "./Portfolio/Main/Pages/ShowcasePage.component";
 import HomePage from "./Portfolio/Main/Pages/HomePage.component";
+import ContactPage from "./Portfolio/Main/Pages/ContactPage.component";
 
 export default function RootLayout() {
     let location = useLocation();

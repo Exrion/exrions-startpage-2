@@ -1,7 +1,6 @@
 import { Box, Container, Grid, Typography, Button } from "@mui/material";
 import { useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { startpageDefaultRoute } from "../../Data/Constants/Routes";
+import { useNavigate } from "react-router-dom";
 import error404Image from './../../Data/Images/Errors/404.jpg';
 
 export default function NotFoundError() {

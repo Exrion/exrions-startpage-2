@@ -5,7 +5,7 @@ export default function PortfolioLayout() {
     const DOCUMENT_TITLE = "Exrion's Portfolio";
 
     useEffect(() => {
-      document.title = DOCUMENT_TITLE;
+        document.title = DOCUMENT_TITLE;
     }, [])
 
     return (

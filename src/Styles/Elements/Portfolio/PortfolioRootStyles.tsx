@@ -1,5 +1,6 @@
 export const RootBoxSx = {
     display: 'flex',
+    overflow: 'hidden',
     py: { md: 5, sm: 3, xs: 0 },
     mb: { md: 0, sm: 0, xs: 9}
 }

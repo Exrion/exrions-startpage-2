@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Fade, Typography } from "@mui/material";
+import { Box, Button, Divider, Fade, styled, Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 import { RootBoxPadding, RootBoxSx, RootStackSpacing, SectionBoxSx, SocialButtonSx, TextBoxSx } from "../../../../Styles/Elements/Portfolio/AboutPageStyles";
 import { mdiGithub, mdiLinkedin, mdiInstagram } from "@mdi/js";
@@ -15,6 +15,11 @@ import TimelineOppositeContent, { timelineOppositeContentClasses } from '@mui/la
 import TimelineDot from '@mui/lab/TimelineDot';
 import WorkIcon from '@mui/icons-material/Work';
 import SchoolIcon from '@mui/icons-material/School';
+import Accordion from "../../../../Components/Elements/Accordion.component";
+import { AccordionType } from "../../../../Components/Elements/Interfaces/AccordionProps";
+import { Rating } from "@mui/lab";
+import CircleIcon from '@mui/icons-material/Circle';
+import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
 
 function SocialIcons(loaded: boolean) {
     return (
@@ -573,6 +578,160 @@ function Journey(loaded: boolean) {
     );
 }
 
+function Skills(loaded: boolean) {
+    const ref = useRef<HTMLDivElement>(null);
+    const isVisible = useOnScreen(ref);
+
+    const StyledRating = styled(Rating)({
+        '& .MuiRating-iconFilled': {
+            color: '#42a5f5',
+        },
+    });
+
+    const accordianArray: AccordionType[] = [
+        {
+            title: 'Web Development', //ReactJS (JS/TS), .NET Core 5 MVC, NextJS
+            content:
+                <>
+                    <Stack
+                        spacing={1}
+                    >
+                        <Box>
+                            <Stack>
+                                <Stack
+                                    direction='row'
+                                    justifyContent='space-between'
+                                >
+                                    <Typography
+                                        variant='h6'
+                                        color='primary.dark'
+                                    >
+                                        ReactJS
+                                    </Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
+                                        <StyledRating
+                                            value={4}
+                                            icon={<CircleIcon fontSize='inherit' />}
+                                            emptyIcon={<CircleOutlinedIcon fontSize='inherit' />}
+                                            readOnly
+                                        />
+                                        <Typography
+                                            variant='subtitle1'
+                                            color='GrayText'
+                                        >
+                                            Advanced
+                                        </Typography>
+                                    </Stack>
+                                </Stack>
+                                Lorem Ipsum
+                            </Stack>
+                        </Box>
+                    </Stack>
+                </>
+        },
+        {
+            title: 'Middleware Technologies', //NodeJS, .NET Core 6 Web API
+            content:
+                <>
+
+                </>
+        },
+        {
+            title: 'Backend Technologies', //MySQL, MSSQL, MongoDB, MariaDB
+            content:
+                <>
+
+                </>
+        },
+        {
+            title: 'Server Administration', //VMWare VSphere, Windows Server, Linux Server, 
+            content:
+                <>
+
+                </>
+        },
+        {
+            title: 'Internetworking', //Cisco Network Devices, Palo Alto Firewalls
+            content:
+                <>
+
+                </>
+        },
+        {
+            title: 'Cloud Services', //Azure, AWS, Dynamics 365
+            content:
+                <>
+
+                </>
+        }
+    ];
+
+    const SkillsElement = () => {
+        return (
+            <>
+                <Box
+                    sx={SectionBoxSx}
+                >
+                    <Stack
+                        spacing={{ md: 0, sm: 0, xs: 1 }}
+                    >
+                        {/* Title and Description */}
+                        <Fade
+                            in={loaded}
+                            timeout={AnimationTimeout(0)}
+                        >
+                            <Typography
+                                variant='h4'
+                                color='salmon'
+                                fontWeight={600}
+                            >
+                                Skills
+                            </Typography>
+                        </Fade>
+                        <Fade
+                            in={loaded}
+                            timeout={AnimationTimeout(1)}
+                        >
+                            <Typography
+                                variant='body1'
+                                color='gray'
+                                textAlign='left'
+                                sx={TextBoxSx}
+                            >
+                                A summary of what I have learned thus far; the technologies that I have worked with over the years.
+                            </Typography>
+                        </Fade>
+
+                        {/* Skills */}
+                        <Fade
+                            in={loaded}
+                            timeout={AnimationTimeout(1)}
+                        >
+                            <Box>
+                                <Accordion AccordianItems={accordianArray} />
+                            </Box>
+                        </Fade>
+                    </Stack>
+                </Box>
+            </>
+        );
+    }
+
+    return (
+        <>
+            <Box
+                ref={ref}
+                sx={SectionBoxSx}
+            >
+                {isVisible && SkillsElement()}
+            </Box>
+        </>
+    );
+}
+
 export default function AboutPage() {
     const [loaded, setLoaded] = useState(false);
 
@@ -604,6 +763,10 @@ export default function AboutPage() {
                     {/* Section 02 */}
                     {/* Journey */}
                     {Journey(loaded)}
+
+                    {/* Section 03 */}
+                    {/* Skills */}
+                    {Skills(loaded)}
                 </Stack>
             </Box>
         </>
