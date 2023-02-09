@@ -596,6 +596,7 @@ function Skills(loaded: boolean) {
                     <Stack
                         spacing={1}
                     >
+                        {/* ReactJS */}
                         <Box>
                             <Stack>
                                 <Stack
@@ -612,21 +613,110 @@ function Skills(loaded: boolean) {
                                         direction='row'
                                         spacing={1}
                                     >
+                                        <Typography
+                                            variant='subtitle1'
+                                            color='GrayText'
+                                        >
+                                            Professional
+                                        </Typography>
                                         <StyledRating
                                             value={4}
                                             icon={<CircleIcon fontSize='inherit' />}
                                             emptyIcon={<CircleOutlinedIcon fontSize='inherit' />}
                                             readOnly
                                         />
+                                    </Stack>
+                                </Stack>
+                                <Typography
+                                    variant='body1'
+                                    color='GrayText'
+                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                >
+                                    Experience with building React Sites in both JavaScript and TypeScript. Familiar with TailwindCSS and Bootstrap, most fluent with Material UI.<br />
+                                    This very site was built with React and the MUI Framework/Library.
+                                </Typography>
+                            </Stack>
+                        </Box>
+
+                        {/* .NET Core 5 MVC */}
+                        <Box>
+                            <Stack>
+                                <Stack
+                                    direction='row'
+                                    justifyContent='space-between'
+                                >
+                                    <Typography
+                                        variant='h6'
+                                        color='primary.dark'
+                                    >
+                                        .NET Core 5 MVC
+                                    </Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
                                         <Typography
                                             variant='subtitle1'
                                             color='GrayText'
                                         >
                                             Advanced
                                         </Typography>
+                                        <StyledRating
+                                            value={3}
+                                            icon={<CircleIcon fontSize='inherit' />}
+                                            emptyIcon={<CircleOutlinedIcon fontSize='inherit' />}
+                                            readOnly
+                                        />
                                     </Stack>
                                 </Stack>
-                                Lorem Ipsum
+                                <Typography
+                                    variant='body1'
+                                    color='GrayText'
+                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                >
+                                    Utilised mostly during my .NET classes during my diploma. Familiar with using models and data annotations for data manipulation and various libraries and framworks for front-end development.
+                                </Typography>
+                            </Stack>
+                        </Box>
+
+                        {/* NextJS */}
+                        <Box>
+                            <Stack>
+                                <Stack
+                                    direction='row'
+                                    justifyContent='space-between'
+                                >
+                                    <Typography
+                                        variant='h6'
+                                        color='primary.dark'
+                                    >
+                                        NextJS
+                                    </Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
+                                        <Typography
+                                            variant='subtitle1'
+                                            color='GrayText'
+                                        >
+                                            Intermediate
+                                        </Typography>
+                                        <StyledRating
+                                            value={2}
+                                            icon={<CircleIcon fontSize='inherit' />}
+                                            emptyIcon={<CircleOutlinedIcon fontSize='inherit' />}
+                                            readOnly
+                                        />
+                                    </Stack>
+                                </Stack>
+                                <Typography
+                                    variant='body1'
+                                    color='GrayText'
+                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                >
+                                    Experimented with using NextJS to build my portfolio before switching to ReactJS TypeScript instead. Due to it's similarity to ReactJS, I believe it won't be too hard to learn the ropes.
+                                </Typography>
                             </Stack>
                         </Box>
                     </Stack>
@@ -636,35 +726,498 @@ function Skills(loaded: boolean) {
             title: 'Middleware Technologies', //NodeJS, .NET Core 6 Web API
             content:
                 <>
+                    <Stack
+                        spacing={1}
+                    >
+                        {/* .NET Core 6 Web API */}
+                        <Box>
+                            <Stack>
+                                <Stack
+                                    direction='row'
+                                    justifyContent='space-between'
+                                >
+                                    <Typography
+                                        variant='h6'
+                                        color='primary.dark'
+                                    >
+                                        .NET Core 6 Web API
+                                    </Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
+                                        <Typography
+                                            variant='subtitle1'
+                                            color='GrayText'
+                                        >
+                                            Professional
+                                        </Typography>
+                                        <StyledRating
+                                            value={4}
+                                            icon={<CircleIcon fontSize='inherit' />}
+                                            emptyIcon={<CircleOutlinedIcon fontSize='inherit' />}
+                                            readOnly
+                                        />
+                                    </Stack>
+                                </Stack>
+                                <Typography
+                                    variant='body1'
+                                    color='GrayText'
+                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                >
+                                    Well-versed in building Web APIs with .NET 6 Web API. As standard practise I implement repository patterns to seperate the various layers of the API in addition to various QOL features such as rate-limiting and data annotations to ensure all cases are accounted for.
+                                </Typography>
+                            </Stack>
+                        </Box>
 
+                        {/* NodeJS */}
+                        <Box>
+                            <Stack>
+                                <Stack
+                                    direction='row'
+                                    justifyContent='space-between'
+                                >
+                                    <Typography
+                                        variant='h6'
+                                        color='primary.dark'
+                                    >
+                                        NodeJS
+                                    </Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
+                                        <Typography
+                                            variant='subtitle1'
+                                            color='GrayText'
+                                        >
+                                            Intermediate
+                                        </Typography>
+                                        <StyledRating
+                                            value={2}
+                                            icon={<CircleIcon fontSize='inherit' />}
+                                            emptyIcon={<CircleOutlinedIcon fontSize='inherit' />}
+                                            readOnly
+                                        />
+                                    </Stack>
+                                </Stack>
+                                <Typography
+                                    variant='body1'
+                                    color='GrayText'
+                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                >
+                                    Used lightly during my Final Year Project during my diploma. Built a simple Web API with my team for basic CRUD actions.
+                                </Typography>
+                            </Stack>
+                        </Box>
+                    </Stack>
                 </>
         },
         {
-            title: 'Backend Technologies', //MySQL, MSSQL, MongoDB, MariaDB
+            title: 'Backend Technologies', //MySQL, MSSQL
             content:
                 <>
-
+                    <Stack
+                        spacing={1}
+                    >
+                        {/* MySQL, MSSQL */}
+                        <Box>
+                            <Stack>
+                                <Stack
+                                    direction='row'
+                                    justifyContent='space-between'
+                                >
+                                    <Typography
+                                        variant='h6'
+                                        color='primary.dark'
+                                    >
+                                        MySQL/MSSQL
+                                    </Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
+                                        <Typography
+                                            variant='subtitle1'
+                                            color='GrayText'
+                                        >
+                                            Advanced
+                                        </Typography>
+                                        <StyledRating
+                                            value={3}
+                                            icon={<CircleIcon fontSize='inherit' />}
+                                            emptyIcon={<CircleOutlinedIcon fontSize='inherit' />}
+                                            readOnly
+                                        />
+                                    </Stack>
+                                </Stack>
+                                <Typography
+                                    variant='body1'
+                                    color='GrayText'
+                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                >
+                                    Able to design and create MSSQL and MySQL databases. Intermediate to advanced knowledge in managing and maintaining them.
+                                </Typography>
+                            </Stack>
+                        </Box>
+                    </Stack>
                 </>
         },
         {
             title: 'Server Administration', //VMWare VSphere, Windows Server, Linux Server, 
             content:
                 <>
+                    <Stack
+                        spacing={1}
+                    >
+                        {/* Windows Server */}
+                        <Box>
+                            <Stack>
+                                <Stack
+                                    direction='row'
+                                    justifyContent='space-between'
+                                >
+                                    <Typography
+                                        variant='h6'
+                                        color='primary.dark'
+                                    >
+                                        Windows Server
+                                    </Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
+                                        <Typography
+                                            variant='subtitle1'
+                                            color='GrayText'
+                                        >
+                                            Advanced
+                                        </Typography>
+                                        <StyledRating
+                                            value={3}
+                                            icon={<CircleIcon fontSize='inherit' />}
+                                            emptyIcon={<CircleOutlinedIcon fontSize='inherit' />}
+                                            readOnly
+                                        />
+                                    </Stack>
+                                </Stack>
+                                <Typography
+                                    variant='body1'
+                                    color='GrayText'
+                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                >
+                                    Able to manage and maintain a Windows Server (Trained with Windows Server 2019 - GUI). Learned to manage the AD to create groups, users and apply AD settings such as deploying Windows Updates and system configurations.
+                                </Typography>
+                            </Stack>
+                        </Box>
 
+                        {/* VMWare VSphere */}
+                        <Box>
+                            <Stack>
+                                <Stack
+                                    direction='row'
+                                    justifyContent='space-between'
+                                >
+                                    <Typography
+                                        variant='h6'
+                                        color='primary.dark'
+                                    >
+                                        VMWare VSphere
+                                    </Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
+                                        <Typography
+                                            variant='subtitle1'
+                                            color='GrayText'
+                                        >
+                                            Intermediate
+                                        </Typography>
+                                        <StyledRating
+                                            value={2}
+                                            icon={<CircleIcon fontSize='inherit' />}
+                                            emptyIcon={<CircleOutlinedIcon fontSize='inherit' />}
+                                            readOnly
+                                        />
+                                    </Stack>
+                                </Stack>
+                                <Typography
+                                    variant='body1'
+                                    color='GrayText'
+                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                >
+                                    Learned to manage and provision resources to users/clients.
+                                </Typography>
+                            </Stack>
+                        </Box>
+
+                        {/* Linux Server */}
+                        <Box>
+                            <Stack>
+                                <Stack
+                                    direction='row'
+                                    justifyContent='space-between'
+                                >
+                                    <Typography
+                                        variant='h6'
+                                        color='primary.dark'
+                                    >
+                                        Linux Servers
+                                    </Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
+                                        <Typography
+                                            variant='subtitle1'
+                                            color='GrayText'
+                                        >
+                                            Intermediate
+                                        </Typography>
+                                        <StyledRating
+                                            value={2}
+                                            icon={<CircleIcon fontSize='inherit' />}
+                                            emptyIcon={<CircleOutlinedIcon fontSize='inherit' />}
+                                            readOnly
+                                        />
+                                    </Stack>
+                                </Stack>
+                                <Typography
+                                    variant='body1'
+                                    color='GrayText'
+                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                >
+                                    Intermediate familiarity with command line, setting permission levels for users and groups, as well as creating them in addition to basic commands for file manipulation.<br />
+                                    <br />
+                                    Also learned to setup Modded Minecraft servers on Linux VMs.
+                                </Typography>
+                            </Stack>
+                        </Box>
+                    </Stack>
                 </>
         },
         {
             title: 'Internetworking', //Cisco Network Devices, Palo Alto Firewalls
             content:
                 <>
+                    <Stack
+                        spacing={1}
+                    >
+                        {/* Cisco Network Devices */}
+                        <Box>
+                            <Stack>
+                                <Stack
+                                    direction='row'
+                                    justifyContent='space-between'
+                                >
+                                    <Typography
+                                        variant='h6'
+                                        color='primary.dark'
+                                    >
+                                        Cisco Network Devices
+                                    </Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
+                                        <Typography
+                                            variant='subtitle1'
+                                            color='GrayText'
+                                        >
+                                            Advanced
+                                        </Typography>
+                                        <StyledRating
+                                            value={3}
+                                            icon={<CircleIcon fontSize='inherit' />}
+                                            emptyIcon={<CircleOutlinedIcon fontSize='inherit' />}
+                                            readOnly
+                                        />
+                                    </Stack>
+                                </Stack>
+                                <Typography
+                                    variant='body1'
+                                    color='GrayText'
+                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                >
+                                    Trained to design and create LAN networks with redundancy and uptime in-mind. Trained with configuring Cisco devices from the command line for wired devices and trained with configuring wireless devices (such as WAPs) from the GUI.
+                                </Typography>
+                            </Stack>
+                        </Box>
 
+                        {/* Palo Alto Firewalls */}
+                        <Box>
+                            <Stack>
+                                <Stack
+                                    direction='row'
+                                    justifyContent='space-between'
+                                >
+                                    <Typography
+                                        variant='h6'
+                                        color='primary.dark'
+                                    >
+                                        Palo Alto Firewalls
+                                    </Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
+                                        <Typography
+                                            variant='subtitle1'
+                                            color='GrayText'
+                                        >
+                                            Advanced
+                                        </Typography>
+                                        <StyledRating
+                                            value={3}
+                                            icon={<CircleIcon fontSize='inherit' />}
+                                            emptyIcon={<CircleOutlinedIcon fontSize='inherit' />}
+                                            readOnly
+                                        />
+                                    </Stack>
+                                </Stack>
+                                <Typography
+                                    variant='body1'
+                                    color='GrayText'
+                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                >
+                                    Able to setup, configure and maintain Palo Alto Firewalls.
+                                </Typography>
+                            </Stack>
+                        </Box>
+                    </Stack>
                 </>
         },
         {
             title: 'Cloud Services', //Azure, AWS, Dynamics 365
             content:
                 <>
+                    <Stack
+                        spacing={1}
+                    >
+                        {/* Dynamics 365 */}
+                        <Box>
+                            <Stack>
+                                <Stack
+                                    direction='row'
+                                    justifyContent='space-between'
+                                >
+                                    <Typography
+                                        variant='h6'
+                                        color='primary.dark'
+                                    >
+                                        Dynamics 365
+                                    </Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
+                                        <Typography
+                                            variant='subtitle1'
+                                            color='GrayText'
+                                        >
+                                            Advanced
+                                        </Typography>
+                                        <StyledRating
+                                            value={3}
+                                            icon={<CircleIcon fontSize='inherit' />}
+                                            emptyIcon={<CircleOutlinedIcon fontSize='inherit' />}
+                                            readOnly
+                                        />
+                                    </Stack>
+                                </Stack>
+                                <Typography
+                                    variant='body1'
+                                    color='GrayText'
+                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                >
+                                    Able to setup D365 Environments and design the entities required for a scenario. Familiar with creating Power Apps on Canvas for custom GUIs as well as the simpler forms and views. Additionally trained with creating plugins and interacting the D365's ODATA API.
+                                </Typography>
+                            </Stack>
+                        </Box>
 
+                        {/* Azure */}
+                        <Box>
+                            <Stack>
+                                <Stack
+                                    direction='row'
+                                    justifyContent='space-between'
+                                >
+                                    <Typography
+                                        variant='h6'
+                                        color='primary.dark'
+                                    >
+                                        Azure
+                                    </Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
+                                        <Typography
+                                            variant='subtitle1'
+                                            color='GrayText'
+                                        >
+                                            Intermediate
+                                        </Typography>
+                                        <StyledRating
+                                            value={2}
+                                            icon={<CircleIcon fontSize='inherit' />}
+                                            emptyIcon={<CircleOutlinedIcon fontSize='inherit' />}
+                                            readOnly
+                                        />
+                                    </Stack>
+                                </Stack>
+                                <Typography
+                                    variant='body1'
+                                    color='GrayText'
+                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                >
+                                    Able to provision and setup web servers and VMs on Azure.
+                                </Typography>
+                            </Stack>
+                        </Box>
+
+                        {/* AWS */}
+                        <Box>
+                            <Stack>
+                                <Stack
+                                    direction='row'
+                                    justifyContent='space-between'
+                                >
+                                    <Typography
+                                        variant='h6'
+                                        color='primary.dark'
+                                    >
+                                        AWS
+                                    </Typography>
+                                    <Stack
+                                        direction='row'
+                                        spacing={1}
+                                    >
+                                        <Typography
+                                            variant='subtitle1'
+                                            color='GrayText'
+                                        >
+                                            Intermediate
+                                        </Typography>
+                                        <StyledRating
+                                            value={2}
+                                            icon={<CircleIcon fontSize='inherit' />}
+                                            emptyIcon={<CircleOutlinedIcon fontSize='inherit' />}
+                                            readOnly
+                                        />
+                                    </Stack>
+                                </Stack>
+                                <Typography
+                                    variant='body1'
+                                    color='GrayText'
+                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                >
+                                    Able to provision and setup RDS and EC2 instances for CRUD applications.
+                                </Typography>
+                            </Stack>
+                        </Box>
+                    </Stack>
                 </>
         }
     ];

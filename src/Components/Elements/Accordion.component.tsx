@@ -1,11 +1,12 @@
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Accordion as MuiAccordion, AccordionSummary, Box, AccordionDetails, Typography } from '@mui/material';
-import React, { useState } from 'react';
+import React from 'react';
 import AccordionProps from '../../Components/Elements/Interfaces/AccordionProps';
 
 const AccordianSx = {
     ".Mui-expanded": {
-        color: 'darksalmon'
+        color: 'darksalmon',
+        transition: 'all 0.1s ease-in-out'
     }
 }
 
