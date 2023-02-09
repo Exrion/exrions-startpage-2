@@ -588,6 +588,10 @@ function Skills(loaded: boolean) {
         },
     });
 
+    const itemSpacing = { md: 0, sm: 0, xs: 1 };
+
+    const itemDescriptionSpacing = { md: 0.6, sm: 0.75, xs: 1 };
+
     const accordianArray: AccordionType[] = [
         {
             title: 'Web Development', //ReactJS (JS/TS), .NET Core 5 MVC, NextJS
@@ -598,7 +602,7 @@ function Skills(loaded: boolean) {
                     >
                         {/* ReactJS */}
                         <Box>
-                            <Stack>
+                            <Stack spacing={itemSpacing}>
                                 <Stack
                                     direction='row'
                                     justifyContent='space-between'
@@ -630,7 +634,7 @@ function Skills(loaded: boolean) {
                                 <Typography
                                     variant='body1'
                                     color='GrayText'
-                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                    maxWidth={itemDescriptionSpacing}
                                 >
                                     Experience with building React Sites in both JavaScript and TypeScript. Familiar with TailwindCSS and Bootstrap, most fluent with Material UI.<br />
                                     This very site was built with React and the MUI Framework/Library.
@@ -640,7 +644,7 @@ function Skills(loaded: boolean) {
 
                         {/* .NET Core 5 MVC */}
                         <Box>
-                            <Stack>
+                            <Stack spacing={itemSpacing}>
                                 <Stack
                                     direction='row'
                                     justifyContent='space-between'
@@ -672,7 +676,7 @@ function Skills(loaded: boolean) {
                                 <Typography
                                     variant='body1'
                                     color='GrayText'
-                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                    maxWidth={itemDescriptionSpacing}
                                 >
                                     Utilised mostly during my .NET classes during my diploma. Familiar with using models and data annotations for data manipulation and various libraries and framworks for front-end development.
                                 </Typography>
@@ -681,7 +685,7 @@ function Skills(loaded: boolean) {
 
                         {/* NextJS */}
                         <Box>
-                            <Stack>
+                            <Stack spacing={itemSpacing}>
                                 <Stack
                                     direction='row'
                                     justifyContent='space-between'
@@ -713,7 +717,7 @@ function Skills(loaded: boolean) {
                                 <Typography
                                     variant='body1'
                                     color='GrayText'
-                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                    maxWidth={itemDescriptionSpacing}
                                 >
                                     Experimented with using NextJS to build my portfolio before switching to ReactJS TypeScript instead. Due to it's similarity to ReactJS, I believe it won't be too hard to learn the ropes.
                                 </Typography>
@@ -731,7 +735,7 @@ function Skills(loaded: boolean) {
                     >
                         {/* .NET Core 6 Web API */}
                         <Box>
-                            <Stack>
+                            <Stack spacing={itemSpacing}>
                                 <Stack
                                     direction='row'
                                     justifyContent='space-between'
@@ -763,7 +767,7 @@ function Skills(loaded: boolean) {
                                 <Typography
                                     variant='body1'
                                     color='GrayText'
-                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                    maxWidth={itemDescriptionSpacing}
                                 >
                                     Well-versed in building Web APIs with .NET 6 Web API. As standard practise I implement repository patterns to seperate the various layers of the API in addition to various QOL features such as rate-limiting and data annotations to ensure all cases are accounted for.
                                 </Typography>
@@ -772,7 +776,7 @@ function Skills(loaded: boolean) {
 
                         {/* NodeJS */}
                         <Box>
-                            <Stack>
+                            <Stack spacing={itemSpacing}>
                                 <Stack
                                     direction='row'
                                     justifyContent='space-between'
@@ -804,7 +808,7 @@ function Skills(loaded: boolean) {
                                 <Typography
                                     variant='body1'
                                     color='GrayText'
-                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                    maxWidth={itemDescriptionSpacing}
                                 >
                                     Used lightly during my Final Year Project during my diploma. Built a simple Web API with my team for basic CRUD actions.
                                 </Typography>
@@ -822,7 +826,7 @@ function Skills(loaded: boolean) {
                     >
                         {/* MySQL, MSSQL */}
                         <Box>
-                            <Stack>
+                            <Stack spacing={itemSpacing}>
                                 <Stack
                                     direction='row'
                                     justifyContent='space-between'
@@ -854,7 +858,7 @@ function Skills(loaded: boolean) {
                                 <Typography
                                     variant='body1'
                                     color='GrayText'
-                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                    maxWidth={itemDescriptionSpacing}
                                 >
                                     Able to design and create MSSQL and MySQL databases. Intermediate to advanced knowledge in managing and maintaining them.
                                 </Typography>
@@ -872,7 +876,7 @@ function Skills(loaded: boolean) {
                     >
                         {/* Windows Server */}
                         <Box>
-                            <Stack>
+                            <Stack spacing={itemSpacing}>
                                 <Stack
                                     direction='row'
                                     justifyContent='space-between'
@@ -904,7 +908,7 @@ function Skills(loaded: boolean) {
                                 <Typography
                                     variant='body1'
                                     color='GrayText'
-                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                    maxWidth={itemDescriptionSpacing}
                                 >
                                     Able to manage and maintain a Windows Server (Trained with Windows Server 2019 - GUI). Learned to manage the AD to create groups, users and apply AD settings such as deploying Windows Updates and system configurations.
                                 </Typography>
@@ -913,7 +917,7 @@ function Skills(loaded: boolean) {
 
                         {/* VMWare VSphere */}
                         <Box>
-                            <Stack>
+                            <Stack spacing={itemSpacing}>
                                 <Stack
                                     direction='row'
                                     justifyContent='space-between'
@@ -945,7 +949,7 @@ function Skills(loaded: boolean) {
                                 <Typography
                                     variant='body1'
                                     color='GrayText'
-                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                    maxWidth={itemDescriptionSpacing}
                                 >
                                     Learned to manage and provision resources to users/clients.
                                 </Typography>
@@ -954,7 +958,7 @@ function Skills(loaded: boolean) {
 
                         {/* Linux Server */}
                         <Box>
-                            <Stack>
+                            <Stack spacing={itemSpacing}>
                                 <Stack
                                     direction='row'
                                     justifyContent='space-between'
@@ -986,7 +990,7 @@ function Skills(loaded: boolean) {
                                 <Typography
                                     variant='body1'
                                     color='GrayText'
-                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                    maxWidth={itemDescriptionSpacing}
                                 >
                                     Intermediate familiarity with command line, setting permission levels for users and groups, as well as creating them in addition to basic commands for file manipulation.<br />
                                     <br />
@@ -1006,7 +1010,7 @@ function Skills(loaded: boolean) {
                     >
                         {/* Cisco Network Devices */}
                         <Box>
-                            <Stack>
+                            <Stack spacing={itemSpacing}>
                                 <Stack
                                     direction='row'
                                     justifyContent='space-between'
@@ -1038,7 +1042,7 @@ function Skills(loaded: boolean) {
                                 <Typography
                                     variant='body1'
                                     color='GrayText'
-                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                    maxWidth={itemDescriptionSpacing}
                                 >
                                     Trained to design and create LAN networks with redundancy and uptime in-mind. Trained with configuring Cisco devices from the command line for wired devices and trained with configuring wireless devices (such as WAPs) from the GUI.
                                 </Typography>
@@ -1047,7 +1051,7 @@ function Skills(loaded: boolean) {
 
                         {/* Palo Alto Firewalls */}
                         <Box>
-                            <Stack>
+                            <Stack spacing={itemSpacing}>
                                 <Stack
                                     direction='row'
                                     justifyContent='space-between'
@@ -1079,7 +1083,7 @@ function Skills(loaded: boolean) {
                                 <Typography
                                     variant='body1'
                                     color='GrayText'
-                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                    maxWidth={itemDescriptionSpacing}
                                 >
                                     Able to setup, configure and maintain Palo Alto Firewalls.
                                 </Typography>
@@ -1097,7 +1101,7 @@ function Skills(loaded: boolean) {
                     >
                         {/* Dynamics 365 */}
                         <Box>
-                            <Stack>
+                            <Stack spacing={itemSpacing}>
                                 <Stack
                                     direction='row'
                                     justifyContent='space-between'
@@ -1129,7 +1133,7 @@ function Skills(loaded: boolean) {
                                 <Typography
                                     variant='body1'
                                     color='GrayText'
-                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                    maxWidth={itemDescriptionSpacing}
                                 >
                                     Able to setup D365 Environments and design the entities required for a scenario. Familiar with creating Power Apps on Canvas for custom GUIs as well as the simpler forms and views. Additionally trained with creating plugins and interacting the D365's ODATA API.
                                 </Typography>
@@ -1138,7 +1142,7 @@ function Skills(loaded: boolean) {
 
                         {/* Azure */}
                         <Box>
-                            <Stack>
+                            <Stack spacing={itemSpacing}>
                                 <Stack
                                     direction='row'
                                     justifyContent='space-between'
@@ -1170,7 +1174,7 @@ function Skills(loaded: boolean) {
                                 <Typography
                                     variant='body1'
                                     color='GrayText'
-                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                    maxWidth={itemDescriptionSpacing}
                                 >
                                     Able to provision and setup web servers and VMs on Azure.
                                 </Typography>
@@ -1179,7 +1183,7 @@ function Skills(loaded: boolean) {
 
                         {/* AWS */}
                         <Box>
-                            <Stack>
+                            <Stack spacing={itemSpacing}>
                                 <Stack
                                     direction='row'
                                     justifyContent='space-between'
@@ -1211,7 +1215,7 @@ function Skills(loaded: boolean) {
                                 <Typography
                                     variant='body1'
                                     color='GrayText'
-                                    maxWidth={{ md: 0.6, sm: 0.6, xs: 1 }}
+                                    maxWidth={itemDescriptionSpacing}
                                 >
                                     Able to provision and setup RDS and EC2 instances for CRUD applications.
                                 </Typography>
