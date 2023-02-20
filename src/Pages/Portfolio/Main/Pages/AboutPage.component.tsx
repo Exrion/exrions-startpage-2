@@ -176,12 +176,11 @@ function Statement(loaded: boolean) {
 }
 
 function Journey(loaded: boolean) {
-    const ref = useRef<HTMLDivElement>(null);
-    const isVisible = useOnScreen(ref);
-
-    const TimelineElement = () => {
-        return (
-            <>
+    return (
+        <>
+            <Box
+                sx={SectionBoxSx}
+            >
                 <Stack
                     spacing={{ md: 0, sm: 0, xs: 1 }}
                 >
@@ -562,17 +561,6 @@ function Journey(loaded: boolean) {
                         </Timeline>
                     </Fade>
                 </Stack>
-            </>
-        );
-    }
-
-    return (
-        <>
-            <Box
-                ref={ref}
-                sx={SectionBoxSx}
-            >
-                {isVisible && TimelineElement()}
             </Box>
         </>
     );
