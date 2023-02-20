@@ -1,9 +1,10 @@
 import { Box } from "@mui/system";
 import emailjs from '@emailjs/browser';
 import { Button, Fade, Modal, Stack, TextField, Typography } from "@mui/material";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FormModalBoxSx } from "../../Styles/Elements/Portfolio/ContactPageStyles";
 import { LoadingButton } from "@mui/lab";
+import { AnimationTimeout } from "../../Utilities/AnimationTimeout";
 
 const controlWidth = {
     md: 0.75,
@@ -14,12 +15,18 @@ const controlWidth = {
 export default function EmailForm() {
     const formElement = useRef<HTMLFormElement>(null);
     const [sendButtonState, setSendButtonState] = useState(false);
+    const [loaded, setLoaded] = useState(false);
     const [modalTitle, setModalTitle] = useState("You should not see this title");
     const [modalText, setModalText] = useState("");
     const [modalState, setModalState] = useState(false);
     const EMAILJS_SERVICEID = process.env.REACT_APP_EMAILJS_SERVICEID;
     const EMAILJS_TEMPLATEID = process.env.REACT_APP_EMAILJS_TEMPLATEID;
     const EMAILJS_PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+    useEffect(() => {
+      setLoaded(true);
+    }, [])
+    
 
     const handleClose = () => {
         setModalState(false);
@@ -92,61 +99,67 @@ export default function EmailForm() {
     return (
         <>
             {resultModal()}
-            <Box
-                py={2}
+            <Fade
+                in={loaded}
+                timeout={AnimationTimeout(2)}
             >
-                <form
-                    ref={formElement}
-                    onSubmit={(e) => onSubmit(e)}
+                <Box
+                    py={2}
                 >
-                    <Stack
-                        spacing={2}
-                        display='flex'
-                        direction='column'
-                        justifyContent='center'
-                        alignItems='center'
+                    <form
+                        ref={formElement}
+                        onSubmit={(e) => onSubmit(e)}
                     >
-                        <TextField
-                            name="from_name"
-                            label="Name"
-                            required
-                            sx={{ width: controlWidth }}
-                        />
-                        <TextField
-                            name="from_orgname"
-                            label="Organisation"
-                            sx={{ width: controlWidth }}
-                        />
-                        <TextField
-                            name="from_regarding"
-                            label="Regarding"
-                            required
-                            sx={{ width: controlWidth }}
-                        />
-                        <TextField
-                            name="from_contact"
-                            label="Contact Information"
-                            required
-                            sx={{ width: controlWidth }}
-                        />
-                        <TextField
-                            name="message"
-                            label="Message"
-                            required
-                            sx={{ width: controlWidth }}
-                            multiline
-                            minRows={6}
-                        />
-                        <LoadingButton
-                            variant="contained"
-                            type="submit"
-                            loading={sendButtonState}
+                        <Stack
+                            spacing={2}
+                            display='flex'
+                            direction='column'
+                            justifyContent='center'
+                            alignItems='center'
                         >
-                            <span>Send Email</span>
-                        </LoadingButton>
-                    </Stack>
-                </form>
-            </Box>
+                            <TextField
+                                name="from_name"
+                                label="Name"
+                                required
+                                sx={{ width: controlWidth }}
+                            />
+                            <TextField
+                                name="from_orgname"
+                                label="Organisation"
+                                required
+                                sx={{ width: controlWidth }}
+                            />
+                            <TextField
+                                name="from_regarding"
+                                label="Regarding"
+                                required
+                                sx={{ width: controlWidth }}
+                            />
+                            <TextField
+                                name="from_contact"
+                                label="Contact Information"
+                                required
+                                sx={{ width: controlWidth }}
+                            />
+                            <TextField
+                                name="message"
+                                label="Message"
+                                required
+                                sx={{ width: controlWidth }}
+                                multiline
+                                minRows={6}
+                            />
+                            <LoadingButton
+                                variant="contained"
+                                type="submit"
+                                loading={sendButtonState}
+                            >
+                                <span>Send Email</span>
+                            </LoadingButton>
+                        </Stack>
+                    </form>
+                </Box>
+            </Fade>
         </>
     );
 }
