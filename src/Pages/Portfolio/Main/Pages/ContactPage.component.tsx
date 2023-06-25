@@ -21,7 +21,9 @@ export default function ContactPage() {
                 <Stack
                     spacing={RootStackSpacing}
                 >
-                    <Box>
+                    <Box
+                        minWidth={1}
+                    >
                         <Fade
                             in={loaded}
                             timeout={AnimationTimeout(0)}

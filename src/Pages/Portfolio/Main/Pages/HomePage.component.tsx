@@ -76,7 +76,7 @@ export default function HomePage() {
                             textAlign='left'
                             maxWidth={0.75}
                         >
-                            I am an aspiring UI/UX Designer and Front-End Web Developer currently studying at Republic Polytechnic. I hope to create experiences that are inclusive of people from all walks of life.
+                            I am an aspiring UI/UX Designer and a Front-End Web Developer currently studying at Republic Polytechnic. I hope to create experiences that are inclusive to people from all walks of life.
                         </Typography>
                     </Fade>
                 </Stack>

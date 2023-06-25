@@ -11,9 +11,10 @@ export const RootBoxPadding = {
 }
 
 export const RootBoxSx = {    
-    maxWidth: {md: 0.65, sm: 0.75, xs: 1},
-    minWidth: {md: 0.65, sm: 0.75, xs: 1},
-    px: {md: 0, sm: 0, xs: 3}
+    maxWidth: {md: 0.75, sm: 0.75, xs: 1},
+    minWidth: {md: 0.75, sm: 0.75, xs: 1},
+    px: {md: 0, sm: 0, xs: 3},
+    pt: {md: 0, sm: 0, xs: 2}
 }
 
 export const SocialButtonSx = {

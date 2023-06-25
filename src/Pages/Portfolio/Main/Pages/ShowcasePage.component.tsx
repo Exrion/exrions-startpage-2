@@ -1,7 +1,15 @@
+import { Stack } from "@mui/material";
+import { RootStackSx } from "../../../../Styles/Elements/Portfolio/ShowcasePageStyles";
+
 export default function ShowcasePage() {
     return (
         <>
-            Showcase
+            <Stack
+                sx={RootStackSx}
+                spacing={2}
+            >
+                Showcase
+            </Stack>
         </>
     );
 }

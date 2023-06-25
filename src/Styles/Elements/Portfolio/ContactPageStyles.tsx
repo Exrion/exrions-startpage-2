@@ -11,7 +11,7 @@ export const RootBoxPadding = {
 }
 
 export const RootBoxSx = {
-    maxWidth: { md: 0.5, sm: 0.65, xs: 1 },
+    maxWidth: { md: 0.45, sm: 0.65, xs: 1 },
     px: { md: 0, sm: 0, xs: 5 },
     pt: { xs: 3 }
 }

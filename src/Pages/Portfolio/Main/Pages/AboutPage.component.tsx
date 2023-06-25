@@ -1,8 +1,6 @@
 import { Box, Button, Divider, Fade, styled, Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 import { RootBoxPadding, RootBoxSx, RootStackSpacing, SectionBoxSx, SocialButtonSx, TextBoxSx } from "../../../../Styles/Elements/Portfolio/AboutPageStyles";
-import { mdiGithub, mdiLinkedin, mdiInstagram } from "@mdi/js";
-import Icon from "@mdi/react";
 import { useState, useEffect, useRef } from "react";
 import { AnimationTimeout } from "../../../../Utilities/AnimationTimeout";
 import useOnScreen from "../../../../Hooks/useOnScreen";
@@ -20,120 +18,6 @@ import { AccordionType } from "../../../../Components/Elements/Interfaces/Accord
 import { Rating } from "@mui/lab";
 import CircleIcon from '@mui/icons-material/Circle';
 import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
-
-function SocialIcons(loaded: boolean) {
-    return (
-        <>
-            <Box
-                display={{ md: 'none', sm: 'none', xs: 'block' }}
-            >
-                <Stack
-                    spacing={1}
-                    direction='row'
-                >
-                    <Fade
-                        in={loaded}
-                        timeout={AnimationTimeout(0)}
-                    >
-                        <Button
-                            variant='text'
-                            size='large'
-                            href='https://github.com/Exrion'
-                            sx={SocialButtonSx}
-                        >
-                            <Icon path={mdiGithub} size={1} />
-                        </Button>
-                    </Fade>
-                    <Fade
-                        in={loaded}
-                        timeout={AnimationTimeout(1)}
-                    >
-                        <Button
-                            variant='text'
-                            size='large'
-                            href='https://www.linkedin.com/in/tituslim-exrion/'
-                            sx={SocialButtonSx}
-                        >
-                            <Icon path={mdiLinkedin} size={1} />
-                        </Button>
-                    </Fade>
-                    <Fade
-                        in={loaded}
-                        timeout={AnimationTimeout(2)}
-                    >
-                        <Button
-                            variant='text'
-                            size='large'
-                            href='https://www.instagram.com/exrionlexom/'
-                            sx={SocialButtonSx}
-                        >
-                            <Icon path={mdiInstagram} size={1} />
-                        </Button>
-                    </Fade>
-                </Stack>
-            </Box>
-            <Box
-                display={{ md: 'block', sm: 'block', xs: 'none' }}
-            >
-                <Stack
-                    spacing={1}
-                    direction='row'
-                >
-                    <Fade
-                        in={loaded}
-                        timeout={AnimationTimeout(0)}
-                    >
-                        <Button
-                            variant='text'
-                            href='https://github.com/Exrion'
-                            sx={SocialButtonSx}
-                        >
-                            <Icon path={mdiGithub} size={1} />
-                        </Button>
-                    </Fade>
-                    <Fade
-                        in={loaded}
-                        timeout={AnimationTimeout(1)}
-                    >
-                        <Button
-                            variant='text'
-                            href='https://www.linkedin.com/in/tituslim-exrion/'
-                            sx={SocialButtonSx}
-                        >
-                            <Icon path={mdiLinkedin} size={1} />
-                        </Button>
-                    </Fade>
-                    <Fade
-                        in={loaded}
-                        timeout={AnimationTimeout(2)}
-                    >
-                        <Button
-                            variant='text'
-                            href='https://www.instagram.com/exrionlexom/'
-                            sx={SocialButtonSx}
-                        >
-                            <Icon path={mdiInstagram} size={1} />
-                        </Button>
-                    </Fade>
-                </Stack>
-            </Box>
-
-            <Box
-                sx={{
-                    ...TextBoxSx,
-                    ...{ display: { md: 'block', sm: 'block', xs: 'none' } }
-                }}
-            >
-                <Fade
-                    in={loaded}
-                    timeout={AnimationTimeout(0)}
-                >
-                    <Divider />
-                </Fade>
-            </Box>
-        </>
-    );
-}
 
 function Statement(loaded: boolean) {
     return (
@@ -166,7 +50,7 @@ function Statement(loaded: boolean) {
                             textAlign='left'
                             sx={TextBoxSx}
                         >
-                            To design and create something that is functional and elegant is what I love to do, I think that software development is a way of expressing that. I've come to love UI/UX Design and Front-end Development the most, to not just create something beautiful and useful, but to also bring it to those who walk different paths. Creating interfaces and experiences that are accessible and inclusive is what I hope to be able to do, so that people from all walks of life can experience the internet equally as well as everyone else.
+                            To design and create something that is functional and elegant is what I love to do, I think that software development is a way of expressing that. I've come to love UI/UX Design and Front-end Development the most, not to just create something beautiful and useful, but to also bring it to those who walk different paths. Creating interfaces and experiences that are accessible and inclusive is what I hope to be able to do, so that people from all walks of life can experience the internet equally as well as everyone else.
                         </Typography>
                     </Fade>
                 </Stack>
@@ -242,7 +126,7 @@ function Journey(loaded: boolean) {
                                         April 2023
                                     </TimelineOppositeContent>
                                     <TimelineSeparator>
-                                        <TimelineDot>
+                                        <TimelineDot color='primary'>
                                             <SchoolIcon />
                                         </TimelineDot>
                                         <TimelineConnector />
@@ -298,7 +182,7 @@ function Journey(loaded: boolean) {
                                     </TimelineOppositeContent>
                                     <TimelineSeparator>
                                         <TimelineConnector />
-                                        <TimelineDot>
+                                        <TimelineDot color='primary'>
                                             <WorkIcon />
                                         </TimelineDot>
                                         <TimelineConnector />
@@ -466,7 +350,7 @@ function Journey(loaded: boolean) {
                                     </TimelineOppositeContent>
                                     <TimelineSeparator>
                                         <TimelineConnector />
-                                        <TimelineDot>
+                                        <TimelineDot color='primary'>
                                             <SchoolIcon />
                                         </TimelineDot>
                                         <TimelineConnector />
@@ -522,7 +406,7 @@ function Journey(loaded: boolean) {
                                     </TimelineOppositeContent>
                                     <TimelineSeparator>
                                         <TimelineConnector />
-                                        <TimelineDot>
+                                        <TimelineDot color='primary'>
                                             <SchoolIcon />
                                         </TimelineDot>
                                     </TimelineSeparator>
@@ -1297,9 +1181,6 @@ export default function AboutPage() {
                     {/* Section 01 */}
                     <Box>
                         <Stack>
-                            {/* Social Icons */}
-                            {SocialIcons(loaded)}
-
                             {/* Statement */}
                             {Statement(loaded)}
                         </Stack>
