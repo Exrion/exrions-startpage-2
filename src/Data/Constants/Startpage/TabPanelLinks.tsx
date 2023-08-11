@@ -1,11 +1,10 @@
 export const LinkDefault = '#';
-export const LinkSchool_LEO2External = 'https://rpfs.rp.edu.sg/adfs/ls/?wa=wsignin1.0&wtrealm=https%3a%2f%2fmyleo.rp.edu.sg%2f&wreply=https%3a%2f%2fmyleo.rp.edu.sg%2fCoreBase%2fLogin%2fADFSAutoLogin%3fReturnUrl%3d%252FCoreBase%252FHome%252FIndex';
-export const LinkSchool_LEO2Internal = 'https://myleo.rp.edu.sg/CoreBase/Login/Index';
-export const LinkSchool_StudentPortal = 'https://students.rp.edu.sg/';
-export const LinkSchool_SA2 = 'https://mysa.rp.edu.sg/';
-export const LinkSchool_Oasis = 'https://student-oasis.rp.edu.sg/psp/cs92stud/?cmd=login&languageCd=ENG&';
-export const LinkSchool_Intranet = 'http://intranet.rp.edu.sg/SitePages/Home.aspx';
-export const LinkSchool_POLITE = 'https://politemall.polite.edu.sg/';
+export const LinkSchool_DRAMA = 'https://drama.digipen.edu/';
+export const LinkSchool_Roundcube = 'https://webmail.digipen.edu/roundcube/';
+export const LinkSchool_DistanceMoodle = 'https://distance3.sg.digipen.edu/2023sg-fall/login/index.php';
+export const LinkSchool_IN4SIT = 'https://in4sit.singaporetech.edu.sg/psc/CSSISSTD/EMPLOYEE/SA/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL?';
+export const LinkSchool_xSiTe = 'https://xsite.singaporetech.edu.sg/d2l/loginh/';
+export const LinkSchool_Intranet = 'https://sitsingaporetechedu.sharepoint.com/sites/students';
 export const LinkDevelopment_GitHub = 'https://github.com/';
 export const LinkDevelopment_Unsplash = 'https://unsplash.com/developers';
 export const LinkDevelopment_MUI = 'https://mui.com/material-ui/getting-started/overview/';
