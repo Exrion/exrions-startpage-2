@@ -1,2 +1,2 @@
 export const developerName = 'Exrion';
-export const officialName = 'Titus Lim';
+export const officialName = 'Cai Xuan';
