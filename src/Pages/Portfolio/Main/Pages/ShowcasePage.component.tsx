@@ -35,55 +35,7 @@ function Item(props: ShowcaseItemProps) {
 export default function ShowcasePage() {
     return (
         <>
-            <Stack
-                sx={RootStackSx}
-                spacing={2}
-            >
-                {/* <Grid
-                    spacing={RootGridSpacing}
-                    columns={RootGridCols}
-                    sx={RootGridSx}
-                >
-                    <Grid md={3}>
-                        <Item>
-                            Test 1
-                        </Item>
-                    </Grid>
-                    <Grid md={1}>
-                        <Item>
-                            Test 2
-                        </Item>
-                    </Grid>
-                    <Grid md={1}>
-                        <Item>
-                            Test 3
-                        </Item>
-                    </Grid>
-                </Grid> */}
-            
-                <Box
-                    sx={ItemRootBoxSx}
-                >
-                    <Item>
-                        Test 1
-                    </Item>
-                    <Item>
-                        Test 1
-                    </Item>
-                    <Item>
-                        Test 1
-                    </Item>
-                    <Item>
-                        Test 1
-                    </Item>
-                    <Item>
-                        Test 1
-                    </Item>
-                    <Item>
-                        Test 1
-                    </Item>
-                </Box>
-            </Stack>
+            Showcase - WIP!
         </>
     );
 }
