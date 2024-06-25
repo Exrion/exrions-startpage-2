@@ -21,11 +21,12 @@ export const RootGridSx = {
 // }
 
 export const ItemBoxSx= {
-    bgcolor: 'gray',
-    color: 'red',
-    // opacity: 0.1,
-    minWidth: '33%',
-    minHeight: '50%',
+    bgcolor: '#BABABA',
+    opacity: 0.6,
+    minWidth: '75vw',
+    minHeight: '120vh',
+    transition: '0.2s',
+    transitionTimingFunction: 'ease-in-out'
 }
 
 export const ItemRootBoxSx = {
