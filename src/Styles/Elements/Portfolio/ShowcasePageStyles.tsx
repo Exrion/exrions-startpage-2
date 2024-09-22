@@ -8,21 +8,7 @@ export const RootGridSx = {
     
 }
 
-// export const RootGridSpacing = {
-//     md: 2,
-//     sm: 1,
-//     xs: 0
-// }
-
-// export const RootGridCols = {
-//     md: 5,
-//     sm: 4,
-//     xs: 2
-// }
-
 export const ItemBoxSx= {
-    bgcolor: '#BABABA',
-    opacity: 0.6,
     minWidth: '75vw',
     minHeight: '120vh',
     transition: '0.2s',

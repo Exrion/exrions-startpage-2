@@ -1,0 +1,6 @@
+iframe {
+    display: flex;
+    border-style: none;
+    margin: 0 auto;
+    min-height: 110vh;
+}
