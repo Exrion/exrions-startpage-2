@@ -110,6 +110,7 @@ export default function ShowcasePage() {
                 </li>
                 <li>Extragavant Projectile and Particle Simulation</li>
                 <li>Laser-wielding, Jetpack-wearing Penguins</li>
+                <li>Written in C++ with help from the SFML2 framework!</li>
               </ul>
             </Typography>
           </Item>
