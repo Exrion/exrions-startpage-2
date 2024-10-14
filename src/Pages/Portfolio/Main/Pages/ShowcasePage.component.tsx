@@ -51,10 +51,10 @@ export default function ShowcasePage() {
         <Stack minHeight="150vh" spacing={5}>
           <Item>
             <Typography
-              variant="h2"
+              variant="h3"
               color="orange"
               textAlign="left"
-              fontWeight={500}
+              fontWeight={400}
               padding={2}
             >
               云山茶 [UI/UX Case Study]
@@ -69,50 +69,55 @@ export default function ShowcasePage() {
           </Item>
           <Item>
             <Typography
-              variant="h2"
+              variant="h3"
               color="orange"
               textAlign="left"
-              fontWeight={500}
+              fontWeight={400}
               padding={2}
             >
               Baelfire [Windows Game] - Work in Progress!
             </Typography>
-            <Box
-              padding={1}
-            >
+            <Box padding={1} display="flex" justifyContent="center">
               <img
                 src={game_baelfire}
-                style={{width: '75vw'}}
+                style={{ width: "72.5vw" }}
                 alt="Baelfire Main Menu Screenshot"
               />
             </Box>
-            <Typography
-              variant="body1"
-              color="black"
-              textAlign="left"
-              fontWeight={300}
-              fontFamily="monospace"
-              padding={2}
-            >
-              Baelfire is a 2D pixel art platformer where you the player must
-              save cyborg animals from the control of a mad scientist!
-              <br />
-              This project began as part of my portfolio for entry into
-              university; it is also meant as a platform for me to understand
-              and gain new skills like pixel art, entity component systems and
-              more!
-              <br />
-              <b>Features:</b>
-              <ul>
-                <li>Raycasted Illumination</li>
-                <li>
-                  Hoverboarding Crocodiles with Mini-guns on their mini-arms!
-                </li>
-                <li>Extragavant Projectile and Particle Simulation</li>
-                <li>Laser-wielding, Jetpack-wearing Penguins</li>
-                <li>Written in C++ with help from the SFML2 framework!</li>
-              </ul>
-            </Typography>
+            <Box padding={1}>
+              <Stack 
+                direction="column"
+                justifyContent="space-between"
+              >
+                <Typography
+                  variant="body1"
+                  color="black"
+                  textAlign="left"
+                  fontWeight={300}
+                  fontFamily="monospace"
+                  padding={2}
+                >
+                  Baelfire is a 2D pixel art platformer. This game serves as a
+                  practise range for me to understand creating games from
+                  scratch!
+                  <br />
+                  This project began as part of my portfolio for entry into
+                  university; it is also meant as a platform for me to
+                  understand and gain new skills like pixel art and entity
+                  component systems.
+                </Typography>
+                <Typography
+                  variant="subtitle1"
+                  color="gray"
+                  textAlign="left"
+                  fontWeight={200}
+                  fontFamily="monospace"
+                  padding={2}
+                >
+                  Written in C++ with help from the SFML2 framework!
+                </Typography>
+              </Stack>
+            </Box>
           </Item>
         </Stack>
       </Box>
