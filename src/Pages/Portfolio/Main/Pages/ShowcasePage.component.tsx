@@ -7,6 +7,7 @@ import {
 import ShowcaseItemProps from "../../../../Components/Elements/Interfaces/ShowcaseItemProps";
 import { useEffect, useState } from "react";
 import game_baelfire from "./../../../../Data/Images/game_baelfire.png";
+import game_fetteredwilderness from "./../../../../Data/Images/game_fetteredwilderness.jpg";
 
 function Item(props: ShowcaseItemProps) {
   const { children } = props;
@@ -75,7 +76,7 @@ export default function ShowcasePage() {
               fontWeight={400}
               padding={2}
             >
-              Baelfire [Windows Game] - Work in Progress!
+              Baelfire [Windows Game]
             </Typography>
             <Box padding={1} display="flex" justifyContent="center">
               <img
@@ -115,6 +116,58 @@ export default function ShowcasePage() {
                   padding={2}
                 >
                   Written in C++ with help from the SFML2 framework!
+                </Typography>
+              </Stack>
+            </Box>
+          </Item>
+          <Item>
+            <Typography
+              variant="h3"
+              color="orange"
+              textAlign="left"
+              fontWeight={400}
+              padding={2}
+            >
+              Fettered Wilderness [Unity Windows Game]
+            </Typography>
+            <Box padding={1} display="flex" justifyContent="center">
+              <img
+                src={game_fetteredwilderness}
+                style={{ width: "72.5vw" }}
+                alt="Screencap of Fettered Wilderness"
+              />
+            </Box>
+            <Box padding={1}>
+              <Stack 
+                direction="column"
+                justifyContent="space-between"
+              >
+                <Typography
+                  variant="body1"
+                  color="black"
+                  textAlign="left"
+                  fontWeight={300}
+                  fontFamily="monospace"
+                  padding={2}
+                >
+                  Fettered Wilderness is my first attempt at a Unity Game! With a focus on environmental design,
+                  atmosphere building and my first try at character and enemy art, this game is an introductory
+                  course to my journey towards designing games. 
+                  <br />
+                  Through this project I have found myself learning much on data structures that are optimal for
+                  the data flow of a Unity Game, as well as how the inspector plays an important role in coding.
+                  I have also learned a lot about art through the creation of the player and enemies. Though much 
+                  of the other art is credited to Szadi Art and Kenney. 
+                </Typography>
+                <Typography
+                  variant="subtitle1"
+                  color="gray"
+                  textAlign="left"
+                  fontWeight={200}
+                  fontFamily="monospace"
+                  padding={2}
+                >
+                  <a href="https://github.com/Exrion/FetteredWildernessGame/releases">Download</a> can be found on my GitHub!
                 </Typography>
               </Stack>
             </Box>
